@@ -24,7 +24,7 @@ import csv
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Set
-from loguru import logger
+from utils.utils_logger import logger
 
 # Known header normalization (handles typos in supplied CSVs)
 _SPECIES_NORMALIZE = {
