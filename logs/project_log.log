@@ -17,3 +17,10 @@
 2025-09-05 17:30:13 | INFO | Kafka broker address: localhost:9092
 2025-09-05 17:30:14 | ERROR | Error checking Kafka: UnrecognizedBrokerVersion
 2025-09-05 17:30:14 | ERROR | Kafka broker is not ready. Please check your Kafka setup. Exiting...
+2025-09-05 17:33:41 | INFO | Logging to file: logs/project_log.log
+2025-09-05 17:33:41 | INFO | Log sanitization enabled, personal info will be removed
+2025-09-05 17:33:41 | INFO | START kafka_producer_pokemon
+2025-09-05 17:33:41 | INFO | Kafka broker address: localhost:9092
+2025-09-05 17:33:41 | INFO | Kafka API version override: (3, 5, 0)
+2025-09-05 17:33:42 | ERROR | Error checking Kafka: UnrecognizedBrokerVersion
+2025-09-05 17:33:42 | ERROR | Kafka broker is not ready. Please check your Kafka setup. Exiting...
