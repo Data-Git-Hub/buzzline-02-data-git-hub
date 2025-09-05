@@ -146,3 +146,77 @@
 2025-09-05 18:04:22 | INFO | [CONSUMER] Polling topic 'pokemon_battles'...
 2025-09-05 18:04:39 | WARNING | Consumer interrupted by user.
 2025-09-05 18:04:39 | INFO | END kafka_consumer_pokemon
+2025-09-05 18:17:39 | INFO | Logging to file: logs/project_log.log
+2025-09-05 18:17:39 | INFO | Log sanitization enabled, personal info will be removed
+2025-09-05 18:17:39 | INFO | START kafka_producer_pokemon
+2025-09-05 18:17:39 | INFO | Kafka broker address: 127.0.0.1:9092
+2025-09-05 18:17:39 | INFO | Kafka API version override: (3, 5, 0)
+2025-09-05 18:17:41 | WARNING | Kafka not ready (attempt 1/5); retrying...
+2025-09-05 18:17:44 | WARNING | Kafka not ready (attempt 2/5); retrying...
+2025-09-05 18:17:47 | WARNING | Kafka not ready (attempt 3/5); retrying...
+2025-09-05 18:17:50 | WARNING | Kafka not ready (attempt 4/5); retrying...
+2025-09-05 18:17:53 | WARNING | Kafka not ready (attempt 5/5); retrying...
+2025-09-05 18:17:54 | ERROR | Kafka not reachable after retries.
+2025-09-05 18:17:54 | WARNING | Kafka broker is not ready. Proceeding anyway and letting producer attempts surface errors.
+2025-09-05 18:17:54 | INFO | [PRODUCER] Kafka topic: pokemon_battles
+2025-09-05 18:17:54 | INFO | [PRODUCER] Interval between events: 1.0 sec
+2025-09-05 18:17:54 | WARNING | First cell of header in PROJECT_ROOT/data/pokemon_attack.csv is '﻿', expected '' or 'Move'
+2025-09-05 18:17:54 | INFO | Loaded Pokémon data successfully.
+2025-09-05 18:17:54 | INFO | Species: ['Bulbasaur', 'Charmander', 'Eevee', 'Gengar', 'Jigglypuff', 'Mewtwo', 'Pikachu', 'Snorlax', 'Squirtle']
+2025-09-05 18:17:54 | INFO | Moves: ['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Quick Attack', 'Shadow Ball', 'Sing', 'Thunderbolt', 'Vine Whip', 'Water Gun']
+2025-09-05 18:17:54 | INFO | Bulbasaur: HP=105, legal_moves=['Body Slam', 'Mimic', 'Psychic', 'Shadow Ball', 'Vine Whip']
+2025-09-05 18:17:54 | INFO | Charmander: HP=99, legal_moves=['Body Slam', 'Flamethrower', 'Mimic', 'Psychic', 'Shadow Ball']
+2025-09-05 18:17:54 | INFO | Eevee: HP=115, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Quick Attack', 'Shadow Ball', 'Thunderbolt', 'Water Gun']
+2025-09-05 18:17:54 | INFO | Gengar: HP=120, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Thunderbolt']
+2025-09-05 18:17:54 | INFO | Jigglypuff: HP=178, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Sing', 'Thunderbolt', 'Water Gun']
+2025-09-05 18:17:54 | INFO | Mewtwo: HP=166, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Thunderbolt', 'Water Gun']
+2025-09-05 18:17:54 | INFO | Pikachu: HP=95, legal_moves=['Body Slam', 'Hyper Beam', 'Mimic', 'Psychic', 'Quick Attack', 'Shadow Ball', 'Thunderbolt']
+2025-09-05 18:17:54 | INFO | Snorlax: HP=220, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Thunderbolt', 'Water Gun']
+2025-09-05 18:17:54 | INFO | Squirtle: HP=104, legal_moves=['Body Slam', 'Mimic', 'Psychic', 'Shadow Ball', 'Water Gun']
+2025-09-05 18:17:54 | INFO | Kafka broker address: 127.0.0.1:9092
+2025-09-05 18:17:54 | INFO | Kafka API version override: (3, 5, 0)
+2025-09-05 18:17:56 | WARNING | Admin topic management failed for 'pokemon_battles': NoBrokersAvailable. Falling back to auto-create...
+2025-09-05 18:17:56 | INFO | Kafka broker address: 127.0.0.1:9092
+2025-09-05 18:17:56 | INFO | Kafka API version override: (3, 5, 0)
+2025-09-05 18:17:56 | INFO | Connecting to Kafka broker at 127.0.0.1:9092...
+2025-09-05 18:17:56 | INFO | Kafka producer successfully created.
+2025-09-05 18:17:56 | INFO | Auto-creating 'pokemon_battles' by sending a warm-up record...
+2025-09-05 18:18:31 | INFO | Logging to file: logs/project_log.log
+2025-09-05 18:18:31 | INFO | Log sanitization enabled, personal info will be removed
+2025-09-05 18:18:31 | INFO | START kafka_consumer_pokemon
+2025-09-05 18:18:31 | INFO | [CONSUMER] Kafka topic: pokemon_battles
+2025-09-05 18:18:31 | INFO | [CONSUMER] Group ID: pokemon_group
+2025-09-05 18:18:31 | INFO | Kafka broker address: 127.0.0.1:9092
+2025-09-05 18:18:31 | INFO | Kafka API version override: (3, 5, 0)
+2025-09-05 18:18:31 | INFO | Creating Kafka consumer. Topic='pokemon_battles' and group ID='pokemon_group'.
+2025-09-05 18:18:31 | INFO | Kafka consumer created successfully.
+2025-09-05 18:18:31 | INFO | [CONSUMER] Polling topic 'pokemon_battles'...
+2025-09-05 18:18:56 | ERROR | Auto-create fallback failed for 'pokemon_battles': KafkaTimeoutError: Failed to update metadata after 60.0 secs.
+2025-09-05 18:26:40 | INFO | Logging to file: logs/project_log.log
+2025-09-05 18:26:40 | INFO | Log sanitization enabled, personal info will be removed
+2025-09-05 18:26:40 | INFO | START kafka_producer_pokemon
+2025-09-05 18:26:40 | INFO | Kafka broker address: localhost:9092
+2025-09-05 18:26:40 | INFO | Kafka API version override: (3, 5, 0)
+2025-09-05 18:26:40 | INFO | Kafka is ready (bootstrap_connected = True).
+2025-09-05 18:26:40 | INFO | [PRODUCER] Kafka topic: pokemon_battles
+2025-09-05 18:26:40 | INFO | [PRODUCER] Interval between events: 1.0 sec
+2025-09-05 18:26:40 | WARNING | First cell of header in PROJECT_ROOT/data/pokemon_attack.csv is '﻿', expected '' or 'Move'
+2025-09-05 18:26:40 | INFO | Loaded Pokémon data successfully.
+2025-09-05 18:26:40 | INFO | Species: ['Bulbasaur', 'Charmander', 'Eevee', 'Gengar', 'Jigglypuff', 'Mewtwo', 'Pikachu', 'Snorlax', 'Squirtle']
+2025-09-05 18:26:40 | INFO | Moves: ['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Quick Attack', 'Shadow Ball', 'Sing', 'Thunderbolt', 'Vine Whip', 'Water Gun']
+2025-09-05 18:26:40 | INFO | Bulbasaur: HP=105, legal_moves=['Body Slam', 'Mimic', 'Psychic', 'Shadow Ball', 'Vine Whip']
+2025-09-05 18:26:40 | INFO | Charmander: HP=99, legal_moves=['Body Slam', 'Flamethrower', 'Mimic', 'Psychic', 'Shadow Ball']
+2025-09-05 18:26:40 | INFO | Eevee: HP=115, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Quick Attack', 'Shadow Ball', 'Thunderbolt', 'Water Gun']
+2025-09-05 18:26:40 | INFO | Gengar: HP=120, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Thunderbolt']
+2025-09-05 18:26:40 | INFO | Jigglypuff: HP=178, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Sing', 'Thunderbolt', 'Water Gun']
+2025-09-05 18:26:40 | INFO | Mewtwo: HP=166, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Thunderbolt', 'Water Gun']
+2025-09-05 18:26:40 | INFO | Pikachu: HP=95, legal_moves=['Body Slam', 'Hyper Beam', 'Mimic', 'Psychic', 'Quick Attack', 'Shadow Ball', 'Thunderbolt']
+2025-09-05 18:26:40 | INFO | Snorlax: HP=220, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Thunderbolt', 'Water Gun']
+2025-09-05 18:26:40 | INFO | Squirtle: HP=104, legal_moves=['Body Slam', 'Mimic', 'Psychic', 'Shadow Ball', 'Water Gun']
+2025-09-05 18:26:40 | INFO | Kafka broker address: localhost:9092
+2025-09-05 18:26:40 | INFO | Kafka API version override: (3, 5, 0)
+2025-09-05 18:26:40 | INFO | Topic 'pokemon_battles' already exists. Clearing it out...
+2025-09-05 18:26:40 | INFO | Kafka broker address: localhost:9092
+2025-09-05 18:26:40 | INFO | Kafka API version override: (3, 5, 0)
+2025-09-05 18:26:40 | WARNING | Admin retention change failed for 'pokemon_battles': list indices must be integers or slices, not ConfigResource. Proceeding to drain without retention change.
+2025-09-05 18:26:40 | INFO | Clearing topic 'pokemon_battles' by consuming all messages...
