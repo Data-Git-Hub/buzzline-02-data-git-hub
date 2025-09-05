@@ -635,3 +635,18 @@
 2025-09-02 09:08:20 | WARNING | Producer interrupted by user.
 2025-09-02 09:08:20 | INFO | Kafka producer closed.
 2025-09-02 09:08:20 | INFO | END producer.
+2025-09-05 16:22:08 | INFO | Logging to file: logs/project_log.log
+2025-09-05 16:22:08 | INFO | Log sanitization enabled, personal info will be removed
+2025-09-05 16:22:08 | WARNING | First cell of header in data/pokemon_attack.csv is '﻿', expected '' or 'Move'
+2025-09-05 16:22:08 | INFO | Loaded Pokémon data successfully.
+2025-09-05 16:22:08 | INFO | Species: ['Bulbasaur', 'Charmander', 'Eevee', 'Gengar', 'Jigglypuff', 'Mewtwo', 'Pikachu', 'Snorlax', 'Squirtle']
+2025-09-05 16:22:08 | INFO | Moves: ['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Quick Attack', 'Shadow Ball', 'Sing', 'Thunderbolt', 'Vine Whip', 'Water Gun']
+2025-09-05 16:22:08 | INFO | Bulbasaur: HP=105, legal_moves=['Body Slam', 'Mimic', 'Psychic', 'Shadow Ball', 'Vine Whip']
+2025-09-05 16:22:08 | INFO | Charmander: HP=99, legal_moves=['Body Slam', 'Flamethrower', 'Mimic', 'Psychic', 'Shadow Ball']
+2025-09-05 16:22:08 | INFO | Eevee: HP=115, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Quick Attack', 'Shadow Ball', 'Thunderbolt', 'Water Gun']
+2025-09-05 16:22:08 | INFO | Gengar: HP=120, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Thunderbolt']
+2025-09-05 16:22:08 | INFO | Jigglypuff: HP=178, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Sing', 'Thunderbolt', 'Water Gun']
+2025-09-05 16:22:08 | INFO | Mewtwo: HP=166, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Thunderbolt', 'Water Gun']
+2025-09-05 16:22:08 | INFO | Pikachu: HP=95, legal_moves=['Body Slam', 'Hyper Beam', 'Mimic', 'Psychic', 'Quick Attack', 'Shadow Ball', 'Thunderbolt']
+2025-09-05 16:22:08 | INFO | Snorlax: HP=220, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Thunderbolt', 'Water Gun']
+2025-09-05 16:22:08 | INFO | Squirtle: HP=104, legal_moves=['Body Slam', 'Mimic', 'Psychic', 'Shadow Ball', 'Water Gun']
