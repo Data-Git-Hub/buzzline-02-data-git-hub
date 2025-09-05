@@ -2,9 +2,9 @@
 utils/pokemon_data.py
 
 Load Pokémon battle data from CSV files:
-- pokemon_attack.csv : which moves each Pokémon is allowed to use (1/0)
+- pokemon_attack.csv : which moves each Pokémon is allowed to use
 - pokemon_damage.csv : damage per move against each defender Pokémon
-- pokemon_hp.csv     : base HP per Pokémon
+- pokemon_hp.csv     : base HP per Pokémon defender
 
 Provides:
 - load_all(data_dir) -> PokemonData
