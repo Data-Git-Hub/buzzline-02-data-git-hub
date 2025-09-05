@@ -24,3 +24,41 @@
 2025-09-05 17:33:41 | INFO | Kafka API version override: (3, 5, 0)
 2025-09-05 17:33:42 | ERROR | Error checking Kafka: UnrecognizedBrokerVersion
 2025-09-05 17:33:42 | ERROR | Kafka broker is not ready. Please check your Kafka setup. Exiting...
+2025-09-05 17:36:23 | INFO | Logging to file: logs/project_log.log
+2025-09-05 17:36:23 | INFO | Log sanitization enabled, personal info will be removed
+2025-09-05 17:36:23 | INFO | START kafka_producer_pokemon
+2025-09-05 17:36:23 | INFO | Kafka broker address: localhost:9092
+2025-09-05 17:36:23 | INFO | Kafka API version override: (3, 5, 0)
+2025-09-05 17:36:23 | ERROR | Error checking Kafka: UnrecognizedBrokerVersion
+2025-09-05 17:36:23 | ERROR | Kafka broker is not ready. Please check your Kafka setup. Exiting...
+2025-09-05 17:36:24 | INFO | Logging to file: logs/project_log.log
+2025-09-05 17:36:24 | INFO | Log sanitization enabled, personal info will be removed
+2025-09-05 17:36:24 | INFO | START kafka_consumer_pokemon
+2025-09-05 17:36:24 | INFO | [CONSUMER] Kafka topic: pokemon_battles
+2025-09-05 17:36:24 | INFO | [CONSUMER] Group ID: pokemon_group
+2025-09-05 17:36:24 | INFO | Kafka broker address: localhost:9092
+2025-09-05 17:36:24 | INFO | Kafka API version override: (3, 5, 0)
+2025-09-05 17:36:24 | INFO | Creating Kafka consumer. Topic='pokemon_battles' and group ID='pokemon_group'.
+2025-09-05 17:36:24 | INFO | Kafka consumer created successfully.
+2025-09-05 17:36:24 | INFO | [CONSUMER] Polling topic 'pokemon_battles'...
+2025-09-05 17:38:33 | WARNING | Consumer interrupted by user.
+2025-09-05 17:38:33 | INFO | END kafka_consumer_pokemon
+2025-09-05 17:38:47 | INFO | Logging to file: logs/project_log.log
+2025-09-05 17:38:47 | INFO | Log sanitization enabled, personal info will be removed
+2025-09-05 17:38:47 | INFO | START kafka_producer_pokemon
+2025-09-05 17:38:47 | INFO | Kafka broker address: localhost:9092
+2025-09-05 17:38:47 | INFO | Kafka API version override: (3, 5, 0)
+2025-09-05 17:38:47 | ERROR | Error checking Kafka: UnrecognizedBrokerVersion
+2025-09-05 17:38:47 | ERROR | Kafka broker is not ready. Please check your Kafka setup. Exiting...
+2025-09-05 17:38:48 | INFO | Logging to file: logs/project_log.log
+2025-09-05 17:38:48 | INFO | Log sanitization enabled, personal info will be removed
+2025-09-05 17:38:48 | INFO | START kafka_consumer_pokemon
+2025-09-05 17:38:48 | INFO | [CONSUMER] Kafka topic: pokemon_battles
+2025-09-05 17:38:48 | INFO | [CONSUMER] Group ID: pokemon_group
+2025-09-05 17:38:48 | INFO | Kafka broker address: localhost:9092
+2025-09-05 17:38:48 | INFO | Kafka API version override: (3, 5, 0)
+2025-09-05 17:38:48 | INFO | Creating Kafka consumer. Topic='pokemon_battles' and group ID='pokemon_group'.
+2025-09-05 17:38:48 | INFO | Kafka consumer created successfully.
+2025-09-05 17:38:48 | INFO | [CONSUMER] Polling topic 'pokemon_battles'...
+2025-09-05 17:39:59 | WARNING | Consumer interrupted by user.
+2025-09-05 17:39:59 | INFO | END kafka_consumer_pokemon
