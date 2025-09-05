@@ -1,9 +1,12 @@
 """
 kafka_consumer_pokemon.py
 
-Consumes Pokémon battle events and logs the parsed JSON.
+Step 3: Log natural-language lines using event payload.
+- For "attack" events: "<Trainer> uses <Move> that does <D> damage to <Opponent>. <Opponent> has <HP_AFTER> HP left!"
+- For "win" events:    "<Trainer> knocks out <Opponent> and wins the battle (<battle_id short>)!"
 """
 
+from __future__ import annotations
 import json
 import os
 
@@ -41,14 +44,31 @@ def main() -> None:
     try:
         logger.info(f"[CONSUMER] Polling topic '{topic}'...")
         for msg in consumer:
-            event = msg.value  # already a dict
-            logger.info(
-                f"[EVENT] battle={event.get('battle_id','')[:8]} "
-                f"turn={event.get('turn')} "
-                f"{event.get('trainer')} -> {event.get('opponent')} "
-                f"move={event.get('move')} dmg={event.get('damage')} "
-                f"ts={event.get('ts')}"
-            )
+            event = msg.value  # dict
+            et = event.get("event_type")
+
+            if et == "attack":
+                trainer = event.get("trainer")
+                opponent = event.get("opponent")
+                move = event.get("move")
+                dmg = int(event.get("damage", 0))
+                hp_after = int(event.get("hp_after", 0))
+                # Natural-language log
+                logger.info(f"{trainer} uses {move} that does {dmg} damage to {opponent}. {opponent} has {hp_after} HP left!")
+
+            elif et == "win":
+                trainer = event.get("trainer")
+                opponent = event.get("opponent")
+                bid_short = (event.get("battle_id", "") or "")[:8]
+                logger.info(f"{trainer} knocks out {opponent} and wins the battle ({bid_short})!")
+
+            else:
+                # Back-compat: if older Step-2 events arrive (no event_type), print a compact line
+                trainer = event.get("trainer")
+                opponent = event.get("opponent")
+                move = event.get("move")
+                dmg = event.get("damage")
+                logger.info(f"{trainer} uses {move} that does {dmg} damage to {opponent}.")
     except KeyboardInterrupt:
         logger.warning("Consumer interrupted by user.")
     except Exception as e:

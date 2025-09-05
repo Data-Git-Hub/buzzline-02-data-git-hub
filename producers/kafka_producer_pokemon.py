@@ -1,20 +1,38 @@
 """
 kafka_producer_pokemon.py
 
-Emits structured Pokémon battle events to Kafka.
+Step 3: Battle state & KO logic
+- Maintain opponent HP using pokemon_hp.csv
+- Keep the same trainer until opponent HP <= 0, emit a "win" event, then start a new battle
+- Enforce legal moves only
+- Emit JSON for "attack" and "win" events
 
-Event:
+Attack event:
 {
+  "event_type": "attack",
   "battle_id": "<uuid4>",
   "turn": <int>,
   "trainer": "<PokemonName>",
   "opponent": "<PokemonName>",
   "move": "<MoveName>",
   "damage": <int>,
-  "ts": "<ISO-8601 UTC timestamp>"
+  "hp_before": <int>,
+  "hp_after": <int>,
+  "ts": "<ISO-8601 UTC>"
+}
+
+Win event:
+{
+  "event_type": "win",
+  "battle_id": "<uuid4>",
+  "turn": <int>,  # last turn that caused the KO
+  "trainer": "<PokemonName>",
+  "opponent": "<PokemonName>",
+  "ts": "<ISO-8601 UTC>"
 }
 """
 
+from __future__ import annotations
 import json
 import os
 import random
@@ -27,12 +45,12 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from utils.utils_logger import logger
-from utils.utils_producer import create_kafka_producer
-from utils.pokemon_data import load_all  # uses your CSV loader (no HP logic used here)
+from utils.utils_producer import create_kafka_producer, get_kafka_broker_address, get_kafka_api_version
+from utils.pokemon_data import load_all  # returns dataclass with allowed_moves, damage, hp, pokemon, moves
 
 
 # ----------------------------
-# Small helpers
+# Helpers
 # ----------------------------
 
 def iso_utc_now() -> str:
@@ -54,13 +72,9 @@ def get_message_interval() -> float:
 
 
 def get_data_dir() -> Path:
-    # project_root/producers/this_file => go up to project root, then /data
+    # project_root/producers/this_file => up to project root, then /data
     return Path(__file__).resolve().parents[1] / "data"
 
-
-# ----------------------------
-# Core battle logic (no HP)
-# ----------------------------
 
 def pick_distinct_pair(items: list[str]) -> tuple[str, str]:
     trainer = random.choice(items)
@@ -95,10 +109,14 @@ def main() -> None:
     logger.info("START kafka_producer_pokemon")
     load_dotenv()
 
+    # Log what we’re connecting to, handy when debugging
+    _ = get_kafka_broker_address()
+    _ = get_kafka_api_version()
+
     topic = get_kafka_topic()
     interval = get_message_interval()
 
-    # Load CSVs (no HP used for Step 2)
+    # Load CSVs (HP, legal moves, damage)
     data_dir = get_data_dir()
     try:
         pdata = load_all(data_dir)
@@ -106,43 +124,73 @@ def main() -> None:
         logger.error(f"[DATA] Failed to load Pokémon CSVs: {e}")
         sys.exit(3)
 
-    # Create producer (JSON serializer)
+    # Producer with JSON serializer
     producer = create_kafka_producer(
-        value_serializer=lambda obj: json.dumps(obj, separators=(',', ':')).encode("utf-8")
+        value_serializer=lambda obj: json.dumps(obj, separators=(",", ":")).encode("utf-8")
     )
     if not producer:
         logger.error("[KAFKA] Failed to create producer.")
         sys.exit(2)
 
-    # Emit events forever: short battles (3–6 turns) to exercise schema
     try:
         while True:
+            # New battle
             battle_id = str(uuid.uuid4())
             trainer, opponent = pick_distinct_pair(pdata.pokemon)
-            max_turns = random.randint(3, 6)
+            # Start opponent at full HP from CSV
+            try:
+                opponent_hp = int(pdata.hp[opponent])
+            except Exception:
+                opponent_hp = 0
 
-            logger.info(f"[BATTLE] {battle_id[:8]}: {trainer} vs {opponent} (up to {max_turns} turns)")
+            turn = 1
+            logger.info(f"[BATTLE] {battle_id[:8]}: {trainer} vs {opponent} (opponent HP = {opponent_hp})")
 
-            for turn in range(1, max_turns + 1):
+            while True:
                 move = pick_legal_move(trainer, pdata.allowed_moves)
                 damage = lookup_damage(move, opponent, pdata.damage)
 
-                event = {
+                hp_before = opponent_hp
+                hp_after = max(0, hp_before - damage)
+
+                attack_event = {
+                    "event_type": "attack",
                     "battle_id": battle_id,
                     "turn": turn,
                     "trainer": trainer,
                     "opponent": opponent,
                     "move": move,
                     "damage": damage,
+                    "hp_before": hp_before,
+                    "hp_after": hp_after,
                     "ts": iso_utc_now(),
                 }
 
-                logger.info(f"[SEND] {event}")
-                producer.send(topic, value=event)
-                # Flush lightly so errors surface but we keep good throughput
+                logger.info(f"[SEND] {attack_event}")
+                producer.send(topic, value=attack_event)
                 producer.flush(timeout=5)
 
                 time.sleep(interval)
+
+                # KO check
+                if hp_after <= 0:
+                    win_event = {
+                        "event_type": "win",
+                        "battle_id": battle_id,
+                        "turn": turn,
+                        "trainer": trainer,
+                        "opponent": opponent,
+                        "ts": iso_utc_now(),
+                    }
+                    logger.info(f"[WIN] {win_event}")
+                    producer.send(topic, value=win_event)
+                    producer.flush(timeout=5)
+                    # End this battle loop; start a brand-new one (trainer may be different next time)
+                    break
+
+                # Continue same battle with same trainer/opponent
+                opponent_hp = hp_after
+                turn += 1
 
     except KeyboardInterrupt:
         logger.warning("Producer interrupted by user.")
