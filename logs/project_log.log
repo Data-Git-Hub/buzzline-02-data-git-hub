@@ -1,161 +1,49 @@
-2025-09-05 18:35:14 | INFO | [SEND] {'battle_id': 'bc649c66-1809-46aa-adf8-d7e4e256d0c2', 'turn': 5, 'trainer': 'Eevee', 'opponent': 'Gengar', 'move': 'Mimic', 'damage': 0, 'ts': '2025-09-05T23:35:14.386535Z'}
-2025-09-05 18:35:14 | INFO | [EVENT] battle=bc649c66 turn=5 Eevee -> Gengar move=Mimic dmg=0 ts=2025-09-05T23:35:14.386535Z
-2025-09-05 18:35:15 | INFO | [BATTLE] 81a4a62c: Squirtle vs Gengar (up to 4 turns)
-2025-09-05 18:35:15 | INFO | [SEND] {'battle_id': '81a4a62c-8f64-4e8a-aa7c-20c35901fae9', 'turn': 1, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Shadow Ball', 'damage': 15, 'ts': '2025-09-05T23:35:15.390807Z'}
-2025-09-05 18:35:15 | INFO | [EVENT] battle=81a4a62c turn=1 Squirtle -> Gengar move=Shadow Ball dmg=15 ts=2025-09-05T23:35:15.390807Z
-2025-09-05 18:35:16 | INFO | [SEND] {'battle_id': '81a4a62c-8f64-4e8a-aa7c-20c35901fae9', 'turn': 2, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Body Slam', 'damage': 30, 'ts': '2025-09-05T23:35:16.393624Z'}
-2025-09-05 18:35:16 | INFO | [EVENT] battle=81a4a62c turn=2 Squirtle -> Gengar move=Body Slam dmg=30 ts=2025-09-05T23:35:16.393624Z
-2025-09-05 18:35:17 | INFO | [SEND] {'battle_id': '81a4a62c-8f64-4e8a-aa7c-20c35901fae9', 'turn': 3, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Body Slam', 'damage': 30, 'ts': '2025-09-05T23:35:17.396373Z'}
-2025-09-05 18:35:17 | INFO | [EVENT] battle=81a4a62c turn=3 Squirtle -> Gengar move=Body Slam dmg=30 ts=2025-09-05T23:35:17.396373Z
-2025-09-05 18:35:18 | INFO | [SEND] {'battle_id': '81a4a62c-8f64-4e8a-aa7c-20c35901fae9', 'turn': 4, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Psychic', 'damage': 17, 'ts': '2025-09-05T23:35:18.398892Z'}
-2025-09-05 18:35:18 | INFO | [EVENT] battle=81a4a62c turn=4 Squirtle -> Gengar move=Psychic dmg=17 ts=2025-09-05T23:35:18.398892Z
-2025-09-05 18:35:19 | INFO | [BATTLE] 5705afcc: Charmander vs Jigglypuff (up to 3 turns)
-2025-09-05 18:35:19 | INFO | [SEND] {'battle_id': '5705afcc-87b9-4070-8be5-e9b5961ae9fc', 'turn': 1, 'trainer': 'Charmander', 'opponent': 'Jigglypuff', 'move': 'Mimic', 'damage': 0, 'ts': '2025-09-05T23:35:19.401466Z'}
-2025-09-05 18:35:19 | INFO | [EVENT] battle=5705afcc turn=1 Charmander -> Jigglypuff move=Mimic dmg=0 ts=2025-09-05T23:35:19.401466Z
-2025-09-05 18:35:20 | INFO | [SEND] {'battle_id': '5705afcc-87b9-4070-8be5-e9b5961ae9fc', 'turn': 2, 'trainer': 'Charmander', 'opponent': 'Jigglypuff', 'move': 'Mimic', 'damage': 0, 'ts': '2025-09-05T23:35:20.404467Z'}
-2025-09-05 18:35:20 | INFO | [EVENT] battle=5705afcc turn=2 Charmander -> Jigglypuff move=Mimic dmg=0 ts=2025-09-05T23:35:20.404467Z
-2025-09-05 18:35:21 | INFO | [SEND] {'battle_id': '5705afcc-87b9-4070-8be5-e9b5961ae9fc', 'turn': 3, 'trainer': 'Charmander', 'opponent': 'Jigglypuff', 'move': 'Body Slam', 'damage': 45, 'ts': '2025-09-05T23:35:21.406809Z'}
-2025-09-05 18:35:21 | INFO | [EVENT] battle=5705afcc turn=3 Charmander -> Jigglypuff move=Body Slam dmg=45 ts=2025-09-05T23:35:21.406809Z
-2025-09-05 18:35:22 | INFO | [BATTLE] d65444fd: Squirtle vs Gengar (up to 4 turns)
-2025-09-05 18:35:22 | INFO | [SEND] {'battle_id': 'd65444fd-04eb-4d53-a9ae-1c3d5a54256f', 'turn': 1, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Shadow Ball', 'damage': 15, 'ts': '2025-09-05T23:35:22.409663Z'}
-2025-09-05 18:35:22 | INFO | [EVENT] battle=d65444fd turn=1 Squirtle -> Gengar move=Shadow Ball dmg=15 ts=2025-09-05T23:35:22.409663Z
-2025-09-05 18:35:23 | INFO | [SEND] {'battle_id': 'd65444fd-04eb-4d53-a9ae-1c3d5a54256f', 'turn': 2, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Water Gun', 'damage': 20, 'ts': '2025-09-05T23:35:23.412286Z'}
-2025-09-05 18:35:23 | INFO | [EVENT] battle=d65444fd turn=2 Squirtle -> Gengar move=Water Gun dmg=20 ts=2025-09-05T23:35:23.412286Z
-2025-09-05 18:35:24 | INFO | [SEND] {'battle_id': 'd65444fd-04eb-4d53-a9ae-1c3d5a54256f', 'turn': 3, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Water Gun', 'damage': 20, 'ts': '2025-09-05T23:35:24.414673Z'}
-2025-09-05 18:35:24 | INFO | [EVENT] battle=d65444fd turn=3 Squirtle -> Gengar move=Water Gun dmg=20 ts=2025-09-05T23:35:24.414673Z
-2025-09-05 18:35:25 | INFO | [SEND] {'battle_id': 'd65444fd-04eb-4d53-a9ae-1c3d5a54256f', 'turn': 4, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Shadow Ball', 'damage': 15, 'ts': '2025-09-05T23:35:25.417512Z'}
-2025-09-05 18:35:25 | INFO | [EVENT] battle=d65444fd turn=4 Squirtle -> Gengar move=Shadow Ball dmg=15 ts=2025-09-05T23:35:25.417512Z
-2025-09-05 18:35:26 | INFO | [BATTLE] c320467f: Bulbasaur vs Jigglypuff (up to 5 turns)
-2025-09-05 18:35:26 | INFO | [SEND] {'battle_id': 'c320467f-11e5-4a8b-bca2-ee28732ed18d', 'turn': 1, 'trainer': 'Bulbasaur', 'opponent': 'Jigglypuff', 'move': 'Psychic', 'damage': 25, 'ts': '2025-09-05T23:35:26.419636Z'}
-2025-09-05 18:35:26 | INFO | [EVENT] battle=c320467f turn=1 Bulbasaur -> Jigglypuff move=Psychic dmg=25 ts=2025-09-05T23:35:26.419636Z
-2025-09-05 18:35:27 | INFO | [SEND] {'battle_id': 'c320467f-11e5-4a8b-bca2-ee28732ed18d', 'turn': 2, 'trainer': 'Bulbasaur', 'opponent': 'Jigglypuff', 'move': 'Psychic', 'damage': 25, 'ts': '2025-09-05T23:35:27.422277Z'}
-2025-09-05 18:35:27 | INFO | [EVENT] battle=c320467f turn=2 Bulbasaur -> Jigglypuff move=Psychic dmg=25 ts=2025-09-05T23:35:27.422277Z
-2025-09-05 18:35:28 | INFO | [SEND] {'battle_id': 'c320467f-11e5-4a8b-bca2-ee28732ed18d', 'turn': 3, 'trainer': 'Bulbasaur', 'opponent': 'Jigglypuff', 'move': 'Shadow Ball', 'damage': 22, 'ts': '2025-09-05T23:35:28.424753Z'}
-2025-09-05 18:35:28 | INFO | [EVENT] battle=c320467f turn=3 Bulbasaur -> Jigglypuff move=Shadow Ball dmg=22 ts=2025-09-05T23:35:28.424753Z
-2025-09-05 18:35:29 | INFO | [SEND] {'battle_id': 'c320467f-11e5-4a8b-bca2-ee28732ed18d', 'turn': 4, 'trainer': 'Bulbasaur', 'opponent': 'Jigglypuff', 'move': 'Mimic', 'damage': 0, 'ts': '2025-09-05T23:35:29.427582Z'}
-2025-09-05 18:35:29 | INFO | [EVENT] battle=c320467f turn=4 Bulbasaur -> Jigglypuff move=Mimic dmg=0 ts=2025-09-05T23:35:29.427582Z
-2025-09-05 18:35:30 | INFO | [SEND] {'battle_id': 'c320467f-11e5-4a8b-bca2-ee28732ed18d', 'turn': 5, 'trainer': 'Bulbasaur', 'opponent': 'Jigglypuff', 'move': 'Shadow Ball', 'damage': 22, 'ts': '2025-09-05T23:35:30.429998Z'}
-2025-09-05 18:35:30 | INFO | [EVENT] battle=c320467f turn=5 Bulbasaur -> Jigglypuff move=Shadow Ball dmg=22 ts=2025-09-05T23:35:30.429998Z
-2025-09-05 18:35:31 | INFO | [BATTLE] a0d71a30: Gengar vs Bulbasaur (up to 3 turns)
-2025-09-05 18:35:31 | INFO | [SEND] {'battle_id': 'a0d71a30-f504-488f-9162-9bad74b987ca', 'turn': 1, 'trainer': 'Gengar', 'opponent': 'Bulbasaur', 'move': 'Body Slam', 'damage': 27, 'ts': '2025-09-05T23:35:31.432280Z'}
-2025-09-05 18:35:31 | INFO | [EVENT] battle=a0d71a30 turn=1 Gengar -> Bulbasaur move=Body Slam dmg=27 ts=2025-09-05T23:35:31.432280Z
-2025-09-05 18:35:32 | INFO | [SEND] {'battle_id': 'a0d71a30-f504-488f-9162-9bad74b987ca', 'turn': 2, 'trainer': 'Gengar', 'opponent': 'Bulbasaur', 'move': 'Flamethrower', 'damage': 35, 'ts': '2025-09-05T23:35:32.434670Z'}
-2025-09-05 18:35:32 | INFO | [EVENT] battle=a0d71a30 turn=2 Gengar -> Bulbasaur move=Flamethrower dmg=35 ts=2025-09-05T23:35:32.434670Z
-2025-09-05 18:35:33 | INFO | [SEND] {'battle_id': 'a0d71a30-f504-488f-9162-9bad74b987ca', 'turn': 3, 'trainer': 'Gengar', 'opponent': 'Bulbasaur', 'move': 'Hyper Beam', 'damage': 13, 'ts': '2025-09-05T23:35:33.437107Z'}
-2025-09-05 18:35:33 | INFO | [EVENT] battle=a0d71a30 turn=3 Gengar -> Bulbasaur move=Hyper Beam dmg=13 ts=2025-09-05T23:35:33.437107Z
-2025-09-05 18:35:34 | INFO | [BATTLE] 6dc8af72: Jigglypuff vs Gengar (up to 4 turns)
-2025-09-05 18:35:34 | INFO | [SEND] {'battle_id': '6dc8af72-ecc8-4137-a004-e9aa36e20a3d', 'turn': 1, 'trainer': 'Jigglypuff', 'opponent': 'Gengar', 'move': 'Hyper Beam', 'damage': 15, 'ts': '2025-09-05T23:35:34.439676Z'}
-2025-09-05 18:35:34 | INFO | [EVENT] battle=6dc8af72 turn=1 Jigglypuff -> Gengar move=Hyper Beam dmg=15 ts=2025-09-05T23:35:34.439676Z
-2025-09-05 18:35:35 | INFO | [SEND] {'battle_id': '6dc8af72-ecc8-4137-a004-e9aa36e20a3d', 'turn': 2, 'trainer': 'Jigglypuff', 'opponent': 'Gengar', 'move': 'Body Slam', 'damage': 30, 'ts': '2025-09-05T23:35:35.442503Z'}
-2025-09-05 18:35:35 | INFO | [EVENT] battle=6dc8af72 turn=2 Jigglypuff -> Gengar move=Body Slam dmg=30 ts=2025-09-05T23:35:35.442503Z
-2025-09-05 18:35:36 | INFO | [SEND] {'battle_id': '6dc8af72-ecc8-4137-a004-e9aa36e20a3d', 'turn': 3, 'trainer': 'Jigglypuff', 'opponent': 'Gengar', 'move': 'Sing', 'damage': 0, 'ts': '2025-09-05T23:35:36.445109Z'}
-2025-09-05 18:35:36 | INFO | [EVENT] battle=6dc8af72 turn=3 Jigglypuff -> Gengar move=Sing dmg=0 ts=2025-09-05T23:35:36.445109Z
-2025-09-05 18:35:37 | INFO | [SEND] {'battle_id': '6dc8af72-ecc8-4137-a004-e9aa36e20a3d', 'turn': 4, 'trainer': 'Jigglypuff', 'opponent': 'Gengar', 'move': 'Body Slam', 'damage': 30, 'ts': '2025-09-05T23:35:37.448547Z'}
-2025-09-05 18:35:37 | INFO | [EVENT] battle=6dc8af72 turn=4 Jigglypuff -> Gengar move=Body Slam dmg=30 ts=2025-09-05T23:35:37.448547Z
-2025-09-05 18:35:38 | INFO | [BATTLE] 4e33db93: Bulbasaur vs Jigglypuff (up to 5 turns)
-2025-09-05 18:35:38 | INFO | [SEND] {'battle_id': '4e33db93-a3da-46e5-ad0e-cba74e2b09b0', 'turn': 1, 'trainer': 'Bulbasaur', 'opponent': 'Jigglypuff', 'move': 'Shadow Ball', 'damage': 22, 'ts': '2025-09-05T23:35:38.450611Z'}
-2025-09-05 18:35:38 | INFO | [EVENT] battle=4e33db93 turn=1 Bulbasaur -> Jigglypuff move=Shadow Ball dmg=22 ts=2025-09-05T23:35:38.450611Z
-2025-09-05 18:35:39 | INFO | [SEND] {'battle_id': '4e33db93-a3da-46e5-ad0e-cba74e2b09b0', 'turn': 2, 'trainer': 'Bulbasaur', 'opponent': 'Jigglypuff', 'move': 'Mimic', 'damage': 0, 'ts': '2025-09-05T23:35:39.453317Z'}
-2025-09-05 18:35:39 | INFO | [EVENT] battle=4e33db93 turn=2 Bulbasaur -> Jigglypuff move=Mimic dmg=0 ts=2025-09-05T23:35:39.453317Z
-2025-09-05 18:35:40 | INFO | [SEND] {'battle_id': '4e33db93-a3da-46e5-ad0e-cba74e2b09b0', 'turn': 3, 'trainer': 'Bulbasaur', 'opponent': 'Jigglypuff', 'move': 'Vine Whip', 'damage': 30, 'ts': '2025-09-05T23:35:40.455891Z'}
-2025-09-05 18:35:40 | INFO | [EVENT] battle=4e33db93 turn=3 Bulbasaur -> Jigglypuff move=Vine Whip dmg=30 ts=2025-09-05T23:35:40.455891Z
-2025-09-05 18:35:41 | INFO | [SEND] {'battle_id': '4e33db93-a3da-46e5-ad0e-cba74e2b09b0', 'turn': 4, 'trainer': 'Bulbasaur', 'opponent': 'Jigglypuff', 'move': 'Shadow Ball', 'damage': 22, 'ts': '2025-09-05T23:35:41.458456Z'}
-2025-09-05 18:35:41 | INFO | [EVENT] battle=4e33db93 turn=4 Bulbasaur -> Jigglypuff move=Shadow Ball dmg=22 ts=2025-09-05T23:35:41.458456Z
-2025-09-05 18:35:42 | INFO | [SEND] {'battle_id': '4e33db93-a3da-46e5-ad0e-cba74e2b09b0', 'turn': 5, 'trainer': 'Bulbasaur', 'opponent': 'Jigglypuff', 'move': 'Mimic', 'damage': 0, 'ts': '2025-09-05T23:35:42.461169Z'}
-2025-09-05 18:35:42 | INFO | [EVENT] battle=4e33db93 turn=5 Bulbasaur -> Jigglypuff move=Mimic dmg=0 ts=2025-09-05T23:35:42.461169Z
-2025-09-05 18:35:43 | INFO | [BATTLE] a6980478: Jigglypuff vs Pikachu (up to 3 turns)
-2025-09-05 18:35:43 | INFO | [SEND] {'battle_id': 'a6980478-d3f7-487c-b9aa-fb504073538f', 'turn': 1, 'trainer': 'Jigglypuff', 'opponent': 'Pikachu', 'move': 'Hyper Beam', 'damage': 12, 'ts': '2025-09-05T23:35:43.463573Z'}
-2025-09-05 18:35:43 | INFO | [EVENT] battle=a6980478 turn=1 Jigglypuff -> Pikachu move=Hyper Beam dmg=12 ts=2025-09-05T23:35:43.463573Z
-2025-09-05 18:35:44 | INFO | [SEND] {'battle_id': 'a6980478-d3f7-487c-b9aa-fb504073538f', 'turn': 2, 'trainer': 'Jigglypuff', 'opponent': 'Pikachu', 'move': 'Hyper Beam', 'damage': 12, 'ts': '2025-09-05T23:35:44.466848Z'}
-2025-09-05 18:35:44 | INFO | [EVENT] battle=a6980478 turn=2 Jigglypuff -> Pikachu move=Hyper Beam dmg=12 ts=2025-09-05T23:35:44.466848Z
-2025-09-05 18:35:45 | INFO | [SEND] {'battle_id': 'a6980478-d3f7-487c-b9aa-fb504073538f', 'turn': 3, 'trainer': 'Jigglypuff', 'opponent': 'Pikachu', 'move': 'Water Gun', 'damage': 16, 'ts': '2025-09-05T23:35:45.469531Z'}
-2025-09-05 18:35:45 | INFO | [EVENT] battle=a6980478 turn=3 Jigglypuff -> Pikachu move=Water Gun dmg=16 ts=2025-09-05T23:35:45.469531Z
-2025-09-05 18:35:46 | INFO | [BATTLE] fb8289c4: Charmander vs Jigglypuff (up to 5 turns)
-2025-09-05 18:35:46 | INFO | [SEND] {'battle_id': 'fb8289c4-0345-4ffb-b9c3-abbdafd74251', 'turn': 1, 'trainer': 'Charmander', 'opponent': 'Jigglypuff', 'move': 'Flamethrower', 'damage': 59, 'ts': '2025-09-05T23:35:46.472558Z'}
-2025-09-05 18:35:46 | INFO | [EVENT] battle=fb8289c4 turn=1 Charmander -> Jigglypuff move=Flamethrower dmg=59 ts=2025-09-05T23:35:46.472558Z
-2025-09-05 18:35:47 | INFO | [SEND] {'battle_id': 'fb8289c4-0345-4ffb-b9c3-abbdafd74251', 'turn': 2, 'trainer': 'Charmander', 'opponent': 'Jigglypuff', 'move': 'Shadow Ball', 'damage': 22, 'ts': '2025-09-05T23:35:47.474757Z'}
-2025-09-05 18:35:47 | INFO | [EVENT] battle=fb8289c4 turn=2 Charmander -> Jigglypuff move=Shadow Ball dmg=22 ts=2025-09-05T23:35:47.474757Z
-2025-09-05 18:35:48 | INFO | [SEND] {'battle_id': 'fb8289c4-0345-4ffb-b9c3-abbdafd74251', 'turn': 3, 'trainer': 'Charmander', 'opponent': 'Jigglypuff', 'move': 'Body Slam', 'damage': 45, 'ts': '2025-09-05T23:35:48.477009Z'}
-2025-09-05 18:35:48 | INFO | [EVENT] battle=fb8289c4 turn=3 Charmander -> Jigglypuff move=Body Slam dmg=45 ts=2025-09-05T23:35:48.477009Z
-2025-09-05 18:35:49 | INFO | [SEND] {'battle_id': 'fb8289c4-0345-4ffb-b9c3-abbdafd74251', 'turn': 4, 'trainer': 'Charmander', 'opponent': 'Jigglypuff', 'move': 'Mimic', 'damage': 0, 'ts': '2025-09-05T23:35:49.479175Z'}
-2025-09-05 18:35:49 | INFO | [EVENT] battle=fb8289c4 turn=4 Charmander -> Jigglypuff move=Mimic dmg=0 ts=2025-09-05T23:35:49.479175Z
-2025-09-05 18:35:50 | INFO | [SEND] {'battle_id': 'fb8289c4-0345-4ffb-b9c3-abbdafd74251', 'turn': 5, 'trainer': 'Charmander', 'opponent': 'Jigglypuff', 'move': 'Body Slam', 'damage': 45, 'ts': '2025-09-05T23:35:50.481324Z'}
-2025-09-05 18:35:50 | INFO | [EVENT] battle=fb8289c4 turn=5 Charmander -> Jigglypuff move=Body Slam dmg=45 ts=2025-09-05T23:35:50.481324Z
-2025-09-05 18:35:51 | INFO | [BATTLE] 8a241abc: Eevee vs Charmander (up to 5 turns)
-2025-09-05 18:35:51 | INFO | [SEND] {'battle_id': '8a241abc-0649-4ea2-be64-5b02040676c7', 'turn': 1, 'trainer': 'Eevee', 'opponent': 'Charmander', 'move': 'Thunderbolt', 'damage': 10, 'ts': '2025-09-05T23:35:51.483633Z'}
-2025-09-05 18:35:51 | INFO | [EVENT] battle=8a241abc turn=1 Eevee -> Charmander move=Thunderbolt dmg=10 ts=2025-09-05T23:35:51.483633Z
-2025-09-05 18:35:52 | INFO | [SEND] {'battle_id': '8a241abc-0649-4ea2-be64-5b02040676c7', 'turn': 2, 'trainer': 'Eevee', 'opponent': 'Charmander', 'move': 'Water Gun', 'damage': 17, 'ts': '2025-09-05T23:35:52.486171Z'}
-2025-09-05 18:35:52 | INFO | [EVENT] battle=8a241abc turn=2 Eevee -> Charmander move=Water Gun dmg=17 ts=2025-09-05T23:35:52.486171Z
-2025-09-05 18:35:53 | INFO | [SEND] {'battle_id': '8a241abc-0649-4ea2-be64-5b02040676c7', 'turn': 3, 'trainer': 'Eevee', 'opponent': 'Charmander', 'move': 'Shadow Ball', 'damage': 12, 'ts': '2025-09-05T23:35:53.488533Z'}
-2025-09-05 18:35:53 | INFO | [EVENT] battle=8a241abc turn=3 Eevee -> Charmander move=Shadow Ball dmg=12 ts=2025-09-05T23:35:53.488533Z
-2025-09-05 18:35:54 | INFO | [SEND] {'battle_id': '8a241abc-0649-4ea2-be64-5b02040676c7', 'turn': 4, 'trainer': 'Eevee', 'opponent': 'Charmander', 'move': 'Shadow Ball', 'damage': 12, 'ts': '2025-09-05T23:35:54.491105Z'}
-2025-09-05 18:35:54 | INFO | [EVENT] battle=8a241abc turn=4 Eevee -> Charmander move=Shadow Ball dmg=12 ts=2025-09-05T23:35:54.491105Z
-2025-09-05 18:35:55 | INFO | [SEND] {'battle_id': '8a241abc-0649-4ea2-be64-5b02040676c7', 'turn': 5, 'trainer': 'Eevee', 'opponent': 'Charmander', 'move': 'Quick Attack', 'damage': 10, 'ts': '2025-09-05T23:35:55.493734Z'}
-2025-09-05 18:35:55 | INFO | [EVENT] battle=8a241abc turn=5 Eevee -> Charmander move=Quick Attack dmg=10 ts=2025-09-05T23:35:55.493734Z
-2025-09-05 18:35:56 | INFO | [BATTLE] a75097f6: Charmander vs Mewtwo (up to 6 turns)
-2025-09-05 18:35:56 | INFO | [SEND] {'battle_id': 'a75097f6-acc7-4b31-b8b8-5a7b523ca250', 'turn': 1, 'trainer': 'Charmander', 'opponent': 'Mewtwo', 'move': 'Psychic', 'damage': 24, 'ts': '2025-09-05T23:35:56.495956Z'}
-2025-09-05 18:35:56 | INFO | [EVENT] battle=a75097f6 turn=1 Charmander -> Mewtwo move=Psychic dmg=24 ts=2025-09-05T23:35:56.495956Z
-2025-09-05 18:35:57 | INFO | [SEND] {'battle_id': 'a75097f6-acc7-4b31-b8b8-5a7b523ca250', 'turn': 2, 'trainer': 'Charmander', 'opponent': 'Mewtwo', 'move': 'Psychic', 'damage': 24, 'ts': '2025-09-05T23:35:57.498970Z'}
-2025-09-05 18:35:57 | INFO | [EVENT] battle=a75097f6 turn=2 Charmander -> Mewtwo move=Psychic dmg=24 ts=2025-09-05T23:35:57.498970Z
-2025-09-05 18:35:58 | INFO | [SEND] {'battle_id': 'a75097f6-acc7-4b31-b8b8-5a7b523ca250', 'turn': 3, 'trainer': 'Charmander', 'opponent': 'Mewtwo', 'move': 'Mimic', 'damage': 0, 'ts': '2025-09-05T23:35:58.501557Z'}
-2025-09-05 18:35:58 | INFO | [EVENT] battle=a75097f6 turn=3 Charmander -> Mewtwo move=Mimic dmg=0 ts=2025-09-05T23:35:58.501557Z
-2025-09-05 18:35:59 | INFO | [SEND] {'battle_id': 'a75097f6-acc7-4b31-b8b8-5a7b523ca250', 'turn': 4, 'trainer': 'Charmander', 'opponent': 'Mewtwo', 'move': 'Psychic', 'damage': 24, 'ts': '2025-09-05T23:35:59.503890Z'}
-2025-09-05 18:35:59 | INFO | [EVENT] battle=a75097f6 turn=4 Charmander -> Mewtwo move=Psychic dmg=24 ts=2025-09-05T23:35:59.503890Z
-2025-09-05 18:36:00 | INFO | [SEND] {'battle_id': 'a75097f6-acc7-4b31-b8b8-5a7b523ca250', 'turn': 5, 'trainer': 'Charmander', 'opponent': 'Mewtwo', 'move': 'Flamethrower', 'damage': 55, 'ts': '2025-09-05T23:36:00.506282Z'}
-2025-09-05 18:36:00 | INFO | [EVENT] battle=a75097f6 turn=5 Charmander -> Mewtwo move=Flamethrower dmg=55 ts=2025-09-05T23:36:00.506282Z
-2025-09-05 18:36:01 | INFO | [SEND] {'battle_id': 'a75097f6-acc7-4b31-b8b8-5a7b523ca250', 'turn': 6, 'trainer': 'Charmander', 'opponent': 'Mewtwo', 'move': 'Psychic', 'damage': 24, 'ts': '2025-09-05T23:36:01.508983Z'}
-2025-09-05 18:36:01 | INFO | [EVENT] battle=a75097f6 turn=6 Charmander -> Mewtwo move=Psychic dmg=24 ts=2025-09-05T23:36:01.508983Z
-2025-09-05 18:36:02 | INFO | [BATTLE] d476c17a: Jigglypuff vs Squirtle (up to 3 turns)
-2025-09-05 18:36:02 | INFO | [SEND] {'battle_id': 'd476c17a-21e2-4729-9dc0-fa8523004877', 'turn': 1, 'trainer': 'Jigglypuff', 'opponent': 'Squirtle', 'move': 'Hyper Beam', 'damage': 13, 'ts': '2025-09-05T23:36:02.511896Z'}
-2025-09-05 18:36:02 | INFO | [EVENT] battle=d476c17a turn=1 Jigglypuff -> Squirtle move=Hyper Beam dmg=13 ts=2025-09-05T23:36:02.511896Z
-2025-09-05 18:36:03 | INFO | [SEND] {'battle_id': 'd476c17a-21e2-4729-9dc0-fa8523004877', 'turn': 2, 'trainer': 'Jigglypuff', 'opponent': 'Squirtle', 'move': 'Sing', 'damage': 0, 'ts': '2025-09-05T23:36:03.514574Z'}
-2025-09-05 18:36:03 | INFO | [EVENT] battle=d476c17a turn=2 Jigglypuff -> Squirtle move=Sing dmg=0 ts=2025-09-05T23:36:03.514574Z
-2025-09-05 18:36:04 | INFO | [SEND] {'battle_id': 'd476c17a-21e2-4729-9dc0-fa8523004877', 'turn': 3, 'trainer': 'Jigglypuff', 'opponent': 'Squirtle', 'move': 'Water Gun', 'damage': 17, 'ts': '2025-09-05T23:36:04.517124Z'}
-2025-09-05 18:36:04 | INFO | [EVENT] battle=d476c17a turn=3 Jigglypuff -> Squirtle move=Water Gun dmg=17 ts=2025-09-05T23:36:04.517124Z
-2025-09-05 18:36:05 | INFO | [BATTLE] 0e349995: Jigglypuff vs Charmander (up to 6 turns)
-2025-09-05 18:36:05 | INFO | [SEND] {'battle_id': '0e349995-d481-418e-9dba-497538bc8cfd', 'turn': 1, 'trainer': 'Jigglypuff', 'opponent': 'Charmander', 'move': 'Psychic', 'damage': 14, 'ts': '2025-09-05T23:36:05.519528Z'}
-2025-09-05 18:36:05 | INFO | [EVENT] battle=0e349995 turn=1 Jigglypuff -> Charmander move=Psychic dmg=14 ts=2025-09-05T23:36:05.519528Z
-2025-09-05 18:36:06 | INFO | [SEND] {'battle_id': '0e349995-d481-418e-9dba-497538bc8cfd', 'turn': 2, 'trainer': 'Jigglypuff', 'opponent': 'Charmander', 'move': 'Thunderbolt', 'damage': 10, 'ts': '2025-09-05T23:36:06.521862Z'}
-2025-09-05 18:36:06 | INFO | [EVENT] battle=0e349995 turn=2 Jigglypuff -> Charmander move=Thunderbolt dmg=10 ts=2025-09-05T23:36:06.521862Z
-2025-09-05 18:36:07 | INFO | [SEND] {'battle_id': '0e349995-d481-418e-9dba-497538bc8cfd', 'turn': 3, 'trainer': 'Jigglypuff', 'opponent': 'Charmander', 'move': 'Shadow Ball', 'damage': 12, 'ts': '2025-09-05T23:36:07.524565Z'}
-2025-09-05 18:36:07 | INFO | [EVENT] battle=0e349995 turn=3 Jigglypuff -> Charmander move=Shadow Ball dmg=12 ts=2025-09-05T23:36:07.524565Z
-2025-09-05 18:36:08 | INFO | [SEND] {'battle_id': '0e349995-d481-418e-9dba-497538bc8cfd', 'turn': 4, 'trainer': 'Jigglypuff', 'opponent': 'Charmander', 'move': 'Psychic', 'damage': 14, 'ts': '2025-09-05T23:36:08.527107Z'}
-2025-09-05 18:36:08 | INFO | [EVENT] battle=0e349995 turn=4 Jigglypuff -> Charmander move=Psychic dmg=14 ts=2025-09-05T23:36:08.527107Z
-2025-09-05 18:36:09 | INFO | [SEND] {'battle_id': '0e349995-d481-418e-9dba-497538bc8cfd', 'turn': 5, 'trainer': 'Jigglypuff', 'opponent': 'Charmander', 'move': 'Shadow Ball', 'damage': 12, 'ts': '2025-09-05T23:36:09.529488Z'}
-2025-09-05 18:36:09 | INFO | [EVENT] battle=0e349995 turn=5 Jigglypuff -> Charmander move=Shadow Ball dmg=12 ts=2025-09-05T23:36:09.529488Z
-2025-09-05 18:36:10 | INFO | [SEND] {'battle_id': '0e349995-d481-418e-9dba-497538bc8cfd', 'turn': 6, 'trainer': 'Jigglypuff', 'opponent': 'Charmander', 'move': 'Mimic', 'damage': 0, 'ts': '2025-09-05T23:36:10.532067Z'}
-2025-09-05 18:36:10 | INFO | [EVENT] battle=0e349995 turn=6 Jigglypuff -> Charmander move=Mimic dmg=0 ts=2025-09-05T23:36:10.532067Z
-2025-09-05 18:36:11 | INFO | [BATTLE] 6c14bb8a: Snorlax vs Charmander (up to 4 turns)
-2025-09-05 18:36:11 | INFO | [SEND] {'battle_id': '6c14bb8a-c1c1-44e0-915b-ab8584f62fbd', 'turn': 1, 'trainer': 'Snorlax', 'opponent': 'Charmander', 'move': 'Water Gun', 'damage': 17, 'ts': '2025-09-05T23:36:11.534401Z'}
-2025-09-05 18:36:11 | INFO | [EVENT] battle=6c14bb8a turn=1 Snorlax -> Charmander move=Water Gun dmg=17 ts=2025-09-05T23:36:11.534401Z
-2025-09-05 18:36:12 | INFO | [SEND] {'battle_id': '6c14bb8a-c1c1-44e0-915b-ab8584f62fbd', 'turn': 2, 'trainer': 'Snorlax', 'opponent': 'Charmander', 'move': 'Flamethrower', 'damage': 33, 'ts': '2025-09-05T23:36:12.536833Z'}
-2025-09-05 18:36:12 | INFO | [EVENT] battle=6c14bb8a turn=2 Snorlax -> Charmander move=Flamethrower dmg=33 ts=2025-09-05T23:36:12.536833Z
-2025-09-05 18:36:13 | INFO | [SEND] {'battle_id': '6c14bb8a-c1c1-44e0-915b-ab8584f62fbd', 'turn': 3, 'trainer': 'Snorlax', 'opponent': 'Charmander', 'move': 'Hyper Beam', 'damage': 12, 'ts': '2025-09-05T23:36:13.539110Z'}
-2025-09-05 18:36:13 | INFO | [EVENT] battle=6c14bb8a turn=3 Snorlax -> Charmander move=Hyper Beam dmg=12 ts=2025-09-05T23:36:13.539110Z
-2025-09-05 18:36:14 | INFO | [SEND] {'battle_id': '6c14bb8a-c1c1-44e0-915b-ab8584f62fbd', 'turn': 4, 'trainer': 'Snorlax', 'opponent': 'Charmander', 'move': 'Shadow Ball', 'damage': 12, 'ts': '2025-09-05T23:36:14.541455Z'}
-2025-09-05 18:36:14 | INFO | [EVENT] battle=6c14bb8a turn=4 Snorlax -> Charmander move=Shadow Ball dmg=12 ts=2025-09-05T23:36:14.541455Z
-2025-09-05 18:36:15 | INFO | [BATTLE] f97f5ba8: Squirtle vs Gengar (up to 3 turns)
-2025-09-05 18:36:15 | INFO | [SEND] {'battle_id': 'f97f5ba8-8f0d-4c91-9537-7e5bd9d98031', 'turn': 1, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Shadow Ball', 'damage': 15, 'ts': '2025-09-05T23:36:15.544258Z'}
-2025-09-05 18:36:15 | INFO | [EVENT] battle=f97f5ba8 turn=1 Squirtle -> Gengar move=Shadow Ball dmg=15 ts=2025-09-05T23:36:15.544258Z
-2025-09-05 18:36:16 | INFO | [SEND] {'battle_id': 'f97f5ba8-8f0d-4c91-9537-7e5bd9d98031', 'turn': 2, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Mimic', 'damage': 0, 'ts': '2025-09-05T23:36:16.546925Z'}
-2025-09-05 18:36:16 | INFO | [EVENT] battle=f97f5ba8 turn=2 Squirtle -> Gengar move=Mimic dmg=0 ts=2025-09-05T23:36:16.546925Z
-2025-09-05 18:36:17 | INFO | [SEND] {'battle_id': 'f97f5ba8-8f0d-4c91-9537-7e5bd9d98031', 'turn': 3, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Shadow Ball', 'damage': 15, 'ts': '2025-09-05T23:36:17.549414Z'}
-2025-09-05 18:36:17 | INFO | [EVENT] battle=f97f5ba8 turn=3 Squirtle -> Gengar move=Shadow Ball dmg=15 ts=2025-09-05T23:36:17.549414Z
-2025-09-05 18:36:18 | INFO | [BATTLE] 6d41ff51: Gengar vs Squirtle (up to 3 turns)
-2025-09-05 18:36:18 | INFO | [SEND] {'battle_id': '6d41ff51-a4d2-4831-8882-4e1d37a245a3', 'turn': 1, 'trainer': 'Gengar', 'opponent': 'Squirtle', 'move': 'Psychic', 'damage': 15, 'ts': '2025-09-05T23:36:18.552068Z'}
-2025-09-05 18:36:18 | WARNING | Consumer interrupted by user.
-2025-09-05 18:36:18 | INFO | END kafka_consumer_pokemon
-2025-09-05 18:36:19 | INFO | [SEND] {'battle_id': '6d41ff51-a4d2-4831-8882-4e1d37a245a3', 'turn': 2, 'trainer': 'Gengar', 'opponent': 'Squirtle', 'move': 'Hyper Beam', 'damage': 13, 'ts': '2025-09-05T23:36:19.554507Z'}
-2025-09-05 18:36:20 | INFO | [SEND] {'battle_id': '6d41ff51-a4d2-4831-8882-4e1d37a245a3', 'turn': 3, 'trainer': 'Gengar', 'opponent': 'Squirtle', 'move': 'Thunderbolt', 'damage': 10, 'ts': '2025-09-05T23:36:20.557228Z'}
-2025-09-05 18:36:21 | INFO | [BATTLE] abea45f8: Bulbasaur vs Mewtwo (up to 4 turns)
-2025-09-05 18:36:21 | INFO | [SEND] {'battle_id': 'abea45f8-0d54-4211-89bd-91a96953c67b', 'turn': 1, 'trainer': 'Bulbasaur', 'opponent': 'Mewtwo', 'move': 'Psychic', 'damage': 24, 'ts': '2025-09-05T23:36:21.559853Z'}
-2025-09-05 18:36:22 | INFO | [SEND] {'battle_id': 'abea45f8-0d54-4211-89bd-91a96953c67b', 'turn': 2, 'trainer': 'Bulbasaur', 'opponent': 'Mewtwo', 'move': 'Shadow Ball', 'damage': 21, 'ts': '2025-09-05T23:36:22.562468Z'}
-2025-09-05 18:36:23 | INFO | [SEND] {'battle_id': 'abea45f8-0d54-4211-89bd-91a96953c67b', 'turn': 3, 'trainer': 'Bulbasaur', 'opponent': 'Mewtwo', 'move': 'Vine Whip', 'damage': 28, 'ts': '2025-09-05T23:36:23.564835Z'}
-2025-09-05 18:36:24 | INFO | [SEND] {'battle_id': 'abea45f8-0d54-4211-89bd-91a96953c67b', 'turn': 4, 'trainer': 'Bulbasaur', 'opponent': 'Mewtwo', 'move': 'Body Slam', 'damage': 42, 'ts': '2025-09-05T23:36:24.567214Z'}
-2025-09-05 18:36:25 | INFO | [BATTLE] 9a0a2f4e: Gengar vs Jigglypuff (up to 5 turns)
-2025-09-05 18:36:25 | INFO | [SEND] {'battle_id': '9a0a2f4e-ac3f-4a41-8fc6-936fd7aeecbd', 'turn': 1, 'trainer': 'Gengar', 'opponent': 'Jigglypuff', 'move': 'Hyper Beam', 'damage': 22, 'ts': '2025-09-05T23:36:25.570022Z'}
-2025-09-05 18:36:26 | INFO | [SEND] {'battle_id': '9a0a2f4e-ac3f-4a41-8fc6-936fd7aeecbd', 'turn': 2, 'trainer': 'Gengar', 'opponent': 'Jigglypuff', 'move': 'Body Slam', 'damage': 45, 'ts': '2025-09-05T23:36:26.572698Z'}
-2025-09-05 18:36:27 | INFO | [SEND] {'battle_id': '9a0a2f4e-ac3f-4a41-8fc6-936fd7aeecbd', 'turn': 3, 'trainer': 'Gengar', 'opponent': 'Jigglypuff', 'move': 'Hyper Beam', 'damage': 22, 'ts': '2025-09-05T23:36:27.575401Z'}
-2025-09-05 18:36:28 | INFO | [SEND] {'battle_id': '9a0a2f4e-ac3f-4a41-8fc6-936fd7aeecbd', 'turn': 4, 'trainer': 'Gengar', 'opponent': 'Jigglypuff', 'move': 'Mimic', 'damage': 0, 'ts': '2025-09-05T23:36:28.578082Z'}
-2025-09-05 18:36:29 | WARNING | Producer interrupted by user.
-2025-09-05 18:36:29 | INFO | END kafka_producer_pokemon
+2025-09-05 18:51:17 | INFO | Jigglypuff uses Sing that does 0 damage to Bulbasaur. Bulbasaur has 87 HP left!
+2025-09-05 18:51:18 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '134d3336-4a7d-4a87-b7e2-fc4a5b4e3c2d', 'turn': 3, 'trainer': 'Jigglypuff', 'opponent': 'Bulbasaur', 'move': 'Body Slam', 'damage': 27, 'hp_before': 87, 'hp_after': 60, 'ts': '2025-09-05T23:51:18.885854Z'}
+2025-09-05 18:51:18 | INFO | Jigglypuff uses Body Slam that does 27 damage to Bulbasaur. Bulbasaur has 60 HP left!
+2025-09-05 18:51:19 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '134d3336-4a7d-4a87-b7e2-fc4a5b4e3c2d', 'turn': 4, 'trainer': 'Jigglypuff', 'opponent': 'Bulbasaur', 'move': 'Hyper Beam', 'damage': 13, 'hp_before': 60, 'hp_after': 47, 'ts': '2025-09-05T23:51:19.888580Z'}
+2025-09-05 18:51:19 | INFO | Jigglypuff uses Hyper Beam that does 13 damage to Bulbasaur. Bulbasaur has 47 HP left!
+2025-09-05 18:51:20 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '134d3336-4a7d-4a87-b7e2-fc4a5b4e3c2d', 'turn': 5, 'trainer': 'Jigglypuff', 'opponent': 'Bulbasaur', 'move': 'Water Gun', 'damage': 18, 'hp_before': 47, 'hp_after': 29, 'ts': '2025-09-05T23:51:20.892264Z'}
+2025-09-05 18:51:20 | INFO | Jigglypuff uses Water Gun that does 18 damage to Bulbasaur. Bulbasaur has 29 HP left!
+2025-09-05 18:51:21 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '134d3336-4a7d-4a87-b7e2-fc4a5b4e3c2d', 'turn': 6, 'trainer': 'Jigglypuff', 'opponent': 'Bulbasaur', 'move': 'Shadow Ball', 'damage': 13, 'hp_before': 29, 'hp_after': 16, 'ts': '2025-09-05T23:51:21.894840Z'}
+2025-09-05 18:51:21 | INFO | Jigglypuff uses Shadow Ball that does 13 damage to Bulbasaur. Bulbasaur has 16 HP left!
+2025-09-05 18:51:22 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '134d3336-4a7d-4a87-b7e2-fc4a5b4e3c2d', 'turn': 7, 'trainer': 'Jigglypuff', 'opponent': 'Bulbasaur', 'move': 'Flamethrower', 'damage': 35, 'hp_before': 16, 'hp_after': 0, 'ts': '2025-09-05T23:51:22.897125Z'}
+2025-09-05 18:51:22 | INFO | Jigglypuff uses Flamethrower that does 35 damage to Bulbasaur. Bulbasaur has 0 HP left!
+2025-09-05 18:51:23 | INFO | [WIN] {'event_type': 'win', 'battle_id': '134d3336-4a7d-4a87-b7e2-fc4a5b4e3c2d', 'turn': 7, 'trainer': 'Jigglypuff', 'opponent': 'Bulbasaur', 'ts': '2025-09-05T23:51:23.899689Z'}
+2025-09-05 18:51:23 | INFO | [BATTLE] 68a413c4: Snorlax vs Mewtwo (opponent HP = 166)
+2025-09-05 18:51:23 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 1, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Hyper Beam', 'damage': 21, 'hp_before': 166, 'hp_after': 145, 'ts': '2025-09-05T23:51:23.901694Z'}
+2025-09-05 18:51:23 | INFO | Jigglypuff knocks out Bulbasaur and wins the battle (134d3336)!
+2025-09-05 18:51:23 | INFO | Snorlax uses Hyper Beam that does 21 damage to Mewtwo. Mewtwo has 145 HP left!
+2025-09-05 18:51:24 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 2, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Psychic', 'damage': 24, 'hp_before': 145, 'hp_after': 121, 'ts': '2025-09-05T23:51:24.903838Z'}
+2025-09-05 18:51:24 | INFO | Snorlax uses Psychic that does 24 damage to Mewtwo. Mewtwo has 121 HP left!
+2025-09-05 18:51:25 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 3, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Water Gun', 'damage': 28, 'hp_before': 121, 'hp_after': 93, 'ts': '2025-09-05T23:51:25.906129Z'}
+2025-09-05 18:51:25 | INFO | Snorlax uses Water Gun that does 28 damage to Mewtwo. Mewtwo has 93 HP left!
+2025-09-05 18:51:26 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 4, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Hyper Beam', 'damage': 21, 'hp_before': 93, 'hp_after': 72, 'ts': '2025-09-05T23:51:26.908872Z'}
+2025-09-05 18:51:26 | INFO | Snorlax uses Hyper Beam that does 21 damage to Mewtwo. Mewtwo has 72 HP left!
+2025-09-05 18:51:27 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 5, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Water Gun', 'damage': 28, 'hp_before': 72, 'hp_after': 44, 'ts': '2025-09-05T23:51:27.911109Z'}
+2025-09-05 18:51:27 | INFO | Snorlax uses Water Gun that does 28 damage to Mewtwo. Mewtwo has 44 HP left!
+2025-09-05 18:51:28 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 6, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Shadow Ball', 'damage': 21, 'hp_before': 44, 'hp_after': 23, 'ts': '2025-09-05T23:51:28.913847Z'}
+2025-09-05 18:51:28 | INFO | Snorlax uses Shadow Ball that does 21 damage to Mewtwo. Mewtwo has 23 HP left!
+2025-09-05 18:51:29 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 7, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Mimic', 'damage': 0, 'hp_before': 23, 'hp_after': 23, 'ts': '2025-09-05T23:51:29.916156Z'}
+2025-09-05 18:51:29 | INFO | Snorlax uses Mimic that does 0 damage to Mewtwo. Mewtwo has 23 HP left!
+2025-09-05 18:51:30 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 8, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Psychic', 'damage': 24, 'hp_before': 23, 'hp_after': 0, 'ts': '2025-09-05T23:51:30.918579Z'}
+2025-09-05 18:51:30 | INFO | Snorlax uses Psychic that does 24 damage to Mewtwo. Mewtwo has 0 HP left!
+2025-09-05 18:51:31 | INFO | [WIN] {'event_type': 'win', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 8, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'ts': '2025-09-05T23:51:31.921230Z'}
+2025-09-05 18:51:31 | INFO | [BATTLE] ee609326: Squirtle vs Gengar (opponent HP = 120)
+2025-09-05 18:51:31 | INFO | Snorlax knocks out Mewtwo and wins the battle (68a413c4)!
+2025-09-05 18:51:31 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 1, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Psychic', 'damage': 17, 'hp_before': 120, 'hp_after': 103, 'ts': '2025-09-05T23:51:31.923234Z'}
+2025-09-05 18:51:31 | INFO | Squirtle uses Psychic that does 17 damage to Gengar. Gengar has 103 HP left!
+2025-09-05 18:51:32 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 2, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Psychic', 'damage': 17, 'hp_before': 103, 'hp_after': 86, 'ts': '2025-09-05T23:51:32.925577Z'}
+2025-09-05 18:51:32 | INFO | Squirtle uses Psychic that does 17 damage to Gengar. Gengar has 86 HP left!
+2025-09-05 18:51:33 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 3, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Body Slam', 'damage': 30, 'hp_before': 86, 'hp_after': 56, 'ts': '2025-09-05T23:51:33.927901Z'}
+2025-09-05 18:51:33 | INFO | Squirtle uses Body Slam that does 30 damage to Gengar. Gengar has 56 HP left!
+2025-09-05 18:51:34 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 4, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Water Gun', 'damage': 20, 'hp_before': 56, 'hp_after': 36, 'ts': '2025-09-05T23:51:34.930552Z'}
+2025-09-05 18:51:34 | WARNING | Consumer interrupted by user.
+2025-09-05 18:51:34 | INFO | END kafka_consumer_pokemon
+2025-09-05 18:51:35 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 5, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Body Slam', 'damage': 30, 'hp_before': 36, 'hp_after': 6, 'ts': '2025-09-05T23:51:35.932745Z'}
+2025-09-05 18:51:36 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 6, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Body Slam', 'damage': 30, 'hp_before': 6, 'hp_after': 0, 'ts': '2025-09-05T23:51:36.935195Z'}
+2025-09-05 18:51:37 | INFO | [WIN] {'event_type': 'win', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 6, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'ts': '2025-09-05T23:51:37.937702Z'}
+2025-09-05 18:51:37 | INFO | [BATTLE] 91e5affe: Bulbasaur vs Mewtwo (opponent HP = 166)
+2025-09-05 18:51:37 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '91e5affe-6b78-4aad-a54d-0806b04f6980', 'turn': 1, 'trainer': 'Bulbasaur', 'opponent': 'Mewtwo', 'move': 'Vine Whip', 'damage': 28, 'hp_before': 166, 'hp_after': 138, 'ts': '2025-09-05T23:51:37.939861Z'}
+2025-09-05 18:51:38 | WARNING | Producer interrupted by user.
+2025-09-05 18:51:38 | INFO | END kafka_producer_pokemon
