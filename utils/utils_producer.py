@@ -4,17 +4,13 @@ utils_producer.py - common functions used by producers.
 Producers send messages to a Kafka topic.
 """
 
-# ============================
-# Import Modules
-# ============================
-
 import os
 import sys
 import time
-from typing import Tuple
+from typing import Tuple, Optional
 
 from dotenv import load_dotenv
-from kafka import KafkaProducer, KafkaConsumer, errors
+from kafka import KafkaProducer, KafkaConsumer
 from kafka.admin import (
     KafkaAdminClient,
     ConfigResource,
@@ -24,18 +20,8 @@ from kafka.admin import (
 
 from utils.utils_logger import logger
 
-
-# ============================
-# Defaults
-# ============================
-
 DEFAULT_KAFKA_BROKER_ADDRESS = "localhost:9092"
 DEFAULT_API_VERSION_STR = "3.5.0"  # safe fallback that kafka-python-ng understands
-
-
-# ============================
-# Helpers
-# ============================
 
 def get_kafka_broker_address() -> str:
     """Fetch Kafka broker address from environment or use default."""
@@ -43,31 +29,27 @@ def get_kafka_broker_address() -> str:
     logger.info(f"Kafka broker address: {broker_address}")
     return broker_address
 
-
-def get_kafka_api_version() -> Tuple[int, int, int]:
+def get_kafka_api_version() -> Optional[Tuple[int, int, int]]:
     """
     Read KAFKA_API_VERSION like '3.5.0' and return (3, 5, 0).
-    Use a conservative default so the client doesn't choke on new brokers.
+    If unset or invalid, return the default tuple.
     """
-    s = os.getenv("KAFKA_API_VERSION", DEFAULT_API_VERSION_STR)
+    s = os.getenv("KAFKA_API_VERSION", DEFAULT_API_VERSION_STR).strip()
     try:
         parts = tuple(int(p) for p in s.split(".")[:3])
         if len(parts) == 2:
             parts = (parts[0], parts[1], 0)
+        logger.info(f"Kafka API version override: {parts}")
+        return parts
     except Exception:
         parts = tuple(int(p) for p in DEFAULT_API_VERSION_STR.split("."))
-    logger.info(f"Kafka API version override: {parts}")
-    return parts
-
-
-# ============================
-# Kafka Readiness Check  (no AdminClient here)
-# ============================
+        logger.info(f"Kafka API version override: {parts}")
+        return parts
 
 def check_kafka_service_is_ready(retries: int = 5, backoff_sec: float = 1.0) -> bool:
     """
-    Verify broker reachability by creating a Producer and checking bootstrap connectivity.
-    Avoids Admin API so we don't hit UnrecognizedBrokerVersion.
+    Verify broker reachability using a Producer and giving it time to connect.
+    Avoid Admin calls here to prevent UnrecognizedBrokerVersion.
     """
     kafka_broker = get_kafka_broker_address()
     api_version = get_kafka_api_version()
@@ -79,9 +61,23 @@ def check_kafka_service_is_ready(retries: int = 5, backoff_sec: float = 1.0) -> 
                 api_version=api_version,
                 value_serializer=lambda x: x.encode("utf-8"),
             )
-            ok = producer.bootstrap_connected()
+
+            # Give the I/O thread a moment to connect.
+            connected = False
+            for _ in range(10):  # up to ~2s total
+                # try to nudge the network thread
+                try:
+                    producer._client.poll(timeout_ms=200)  # internal but effective
+                except Exception:
+                    pass
+                if producer.bootstrap_connected():
+                    connected = True
+                    break
+                time.sleep(0.2)
+
             producer.close()
-            if ok:
+
+            if connected:
                 logger.info("Kafka is ready (bootstrap_connected = True).")
                 return True
             else:
@@ -93,16 +89,18 @@ def check_kafka_service_is_ready(retries: int = 5, backoff_sec: float = 1.0) -> 
     logger.error("Kafka not reachable after retries.")
     return False
 
-
-# ============================
-# Producer & Topic Management
-# ============================
-
-def verify_services():
+def verify_services(strict: bool = False):
+    """
+    If strict=True, exit when broker seems unavailable.
+    Otherwise just warn and proceed (topic creation will try again).
+    """
     if not check_kafka_service_is_ready():
-        logger.error("Kafka broker is not ready. Please check your Kafka setup. Exiting...")
-        sys.exit(2)
-
+        msg = "Kafka broker is not ready."
+        if strict:
+            logger.error(f"{msg} Please check your Kafka setup. Exiting...")
+            sys.exit(2)
+        else:
+            logger.warning(f"{msg} Proceeding anyway and letting producer attempts surface errors.")
 
 def create_kafka_producer(value_serializer=None):
     """
@@ -127,7 +125,6 @@ def create_kafka_producer(value_serializer=None):
     except Exception as e:
         logger.error(f"Failed to create Kafka producer: {e}")
         return None
-
 
 def create_kafka_topic(topic_name: str, group_id: str | None = None) -> None:
     """
@@ -171,7 +168,6 @@ def create_kafka_topic(topic_name: str, group_id: str | None = None) -> None:
         logger.error(f"Auto-create fallback failed for '{topic_name}': {e}")
         sys.exit(1)
 
-
 def clear_kafka_topic(topic_name: str, group_id: str | None):
     """
     Consume & discard all messages (and briefly set retention to 1ms) to clear a topic.
@@ -182,6 +178,7 @@ def clear_kafka_topic(topic_name: str, group_id: str | None):
 
     # Try Admin retention trick
     admin_client = None
+    original_retention = None
     try:
         admin_client = KafkaAdminClient(bootstrap_servers=kafka_broker, api_version=api_version)
         config_resource = ConfigResource(ConfigResourceType.TOPIC, topic_name)
@@ -219,26 +216,20 @@ def clear_kafka_topic(topic_name: str, group_id: str | None):
         logger.error(f"Error draining '{topic_name}': {e}")
 
     # Try to restore retention if we changed it
-    try:
-        admin_client = KafkaAdminClient(bootstrap_servers=kafka_broker, api_version=api_version)
-        config_resource = ConfigResource(ConfigResourceType.TOPIC, topic_name)
-        # If we failed to read original earlier, this will no-op (safe).
-        admin_client.alter_configs({config_resource: {"retention.ms": "604800000"}})
-        logger.info(f"Retention.ms restored for '{topic_name}'.")
-    except Exception:
-        # It's OK if we can't restore; topic will continue with broker/topic defaults.
-        pass
-    finally:
-        if admin_client:
-            try:
-                admin_client.close()
-            except Exception:
-                pass
-
-
-# ============================
-# Main for quick test
-# ============================
+    if original_retention is not None:
+        try:
+            admin_client = KafkaAdminClient(bootstrap_servers=kafka_broker, api_version=api_version)
+            config_resource = ConfigResource(ConfigResourceType.TOPIC, topic_name)
+            admin_client.alter_configs({config_resource: {"retention.ms": original_retention}})
+            logger.info(f"Retention.ms restored to {original_retention} for '{topic_name}'.")
+        except Exception:
+            pass
+        finally:
+            if admin_client:
+                try:
+                    admin_client.close()
+                except Exception:
+                    pass
 
 def main():
     logger.info("Starting utils_producer.py script...")
@@ -251,7 +242,6 @@ def main():
 
     logger.info("All services are ready. Proceed with producer setup.")
     create_kafka_topic("test_topic", "default_group")
-
 
 if __name__ == "__main__":
     main()

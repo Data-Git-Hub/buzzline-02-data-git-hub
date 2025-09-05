@@ -4,17 +4,9 @@ utils_consumer.py - common functions used by consumers.
 Consumers subscribe to a topic and read messages from the Kafka topic.
 """
 
-# ============================
-# Imports
-# ============================
-
 from kafka import KafkaConsumer
 from utils.utils_logger import logger
 from .utils_producer import get_kafka_broker_address, get_kafka_api_version
-
-# ============================
-# Factory
-# ============================
 
 def create_kafka_consumer(
     topic_provided: str | None = None,
