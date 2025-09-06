@@ -105,6 +105,12 @@ source .venv/bin/activate
 python3 -m consumers.kafka_consumer_case
 ```
 
+# Task 5 P.2 Pokémon Battle Simulator
+
+*** Important instructions on setting up this project ***
+
+
+
 ## Later Work Sessions
 
 When resuming work on this project:
