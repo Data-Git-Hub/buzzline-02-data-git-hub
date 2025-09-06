@@ -184,20 +184,129 @@ The loader normalizes a few known typos (e.g., "Jigglyfuff" → "Jigglypuff") an
 
 ### Battle rules
 
-### Producer picks a trainer and opponent at random.
-### Trainer’s move is chosen only from legal moves for that Pokémon (from pokemon_attack.csv).
-### Damage is looked up from pokemon_damage.csv for (move, opponent).
-### The consumer tracks opponent HP (from pokemon_hp.csv) and decrements on each event.
-### When opponent HP ≤ 0, the consumer logs a KO and win message and the producer starts a new battle.
+    Producer picks a trainer and opponent at random.
+    Trainer’s move is chosen only from legal moves for that Pokémon (from pokemon_attack.csv).
+    Damage is looked up from pokemon_damage.csv for (move, opponent).
+    The consumer tracks opponent HP (from pokemon_hp.csv) and decrements on each event.
+    When opponent HP ≤ 0, the consumer logs a KO and win message and the producer starts a new battle.
 
 ### Consumer emits metrics every 15 seconds for the rolling last 60 seconds:
-    - Total KOs
-    - Most damage given (Pokémon)
-    - Most damage received (Pokémon)
-    - Rolling average damage
-    - Legality rate (should be 100%)
 
-*** Important instructions on setting up this project ***
+- Total KOs
+- Most damage given (Pokémon)
+- Most damage received (Pokémon)
+- Rolling average damage
+- Legality rate (should be 100%)
+
+# *** Important instructions on setting up this project ***
+
+Task 1. Install & Start Kafka (using WSL if Windows)
+
+Kafka is Linux-native and large. We’ll run it in WSL (Ubuntu).
+
+Prereqs
+
+Windows 10/11 with WSL2 (Ubuntu) installed
+Java 17+ in WSL (`java -version`)
+Python 3.10+ on Windows
+
+Do these in a WSL terminal (Ubuntu).
+
+1) Start (or initialize) Kafka KRaft
+```shell
+cd ~/kafka
+# If FIRST RUN ONLY, format storage (keep the UUID you get from random-uuid)
+# uuid=$(bin/kafka-storage.sh random-uuid)
+# bin/kafka-storage.sh format -t $uuid -c config/kraft/server.properties
+
+bin/kafka-server-start.sh config/kraft/server.properties
+```
+
+2) Verify ports
+```shell
+ss -ltnp | egrep ':9092|:9093'
+```
+
+You should see 9092 (broker) and 9093 (controller).
+If you only see 9093, fix your `config/kraft/server.properties` so that:
+
+```shell
+listeners=PLAINTEXT://127.0.0.1:9092,CONTROLLER://127.0.0.1:9093
+advertised.listeners=PLAINTEXT://127.0.0.1:9092,CONTROLLER://127.0.0.1:9093
+```
+
+Restart Kafka after changes.
+
+3) Create the topic (reliable, do this in WSL)
+```shell
+cd ~/kafka
+bin/kafka-topics.sh --bootstrap-server 127.0.0.1:9092 \
+  --create --topic pokemon_battles --partitions 1 --replication-factor 1
+
+bin/kafka-topics.sh --bootstrap-server 127.0.0.1:9092 --list
+# Expect: pokemon_battles
+```
+---
+
+Task 2. Manage Local Project Virtual Environment
+
+Open the project in VS Code and set up a venv.
+
+Windows (PowerShell)
+```shell
+cd C:\Projects\buzzline-02-data-git-hub
+py -3.11 -m venv .venv
+. .\.venv\Scripts\Activate.ps1
+py -m pip install --upgrade pip wheel setuptools
+py -m pip install --upgrade -r requirements.txt
+```
+
+If you get an execution policy error:
+
+```shell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+Mac / Linux
+```bash
+cd ~/path/to/buzzline-02-data-git-hub
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade -r requirements.txt
+```
+
+---
+
+Task 3. Configure Environment Variables
+
+You can set these per session in PowerShell, or place them in a `.env` file at the project root.
+
+PowerShell (recommended for clarity)
+```shell
+$env:KAFKA_BROKER_ADDRESS="127.0.0.1:9092"
+$env:KAFKA_TOPIC="pokemon_battles"
+$env:KAFKA_API_VERSION="3.5.0"      # avoids client/broker probing issues
+$env:MESSAGE_INTERVAL_SECONDS="1"
+$env:LOG_ROLE="producer"            # set 'consumer' in consumer terminal
+```
+Optional .env file
+```shell
+KAFKA_BROKER_ADDRESS=127.0.0.1:9092
+KAFKA_TOPIC=pokemon_battles
+KAFKA_API_VERSION=3.5.0
+MESSAGE_INTERVAL_SECONDS=1
+LOG_ROLE=app
+```
+If 127.0.0.1:9092 doesn’t work from Windows:
+Find your WSL IP:
+```shell
+wsl.exe hostname -I
+```
+Take the first IP (e.g., `172.23.170.127`) and set:
+```shell
+$env:KAFKA_B
+```
 
 
 ### Later Work Sessions
