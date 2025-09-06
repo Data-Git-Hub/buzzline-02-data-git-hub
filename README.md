@@ -420,6 +420,77 @@ If you see retention/rotation errors in `logs/`:
 
 ---
 
+Data Files & Rules
+
+`data/pokemon_attack.csv` — legal move matrix (1 = move is allowed for that Pokémon)
+`data/pokemon_damage.csv` — integer damage for (move → defender) pairs
+`data/pokemon_hp.csv` — base HP per Pokémon (used by the consumer)
+
+Battle flow:
+
+Producer emits `{battle_id, turn, trainer, opponent, move, damage, ts}` for legal moves only.
+Consumer applies HP to the opponent until HP ≤ 0 → logs KO and win.
+Consumer verifies legality and raises an alert if an illegal move appears.
+Consumer prints minute-window metrics every 15 seconds.
+
+---
+
+Useful One-Liners
+
+WSL — start Kafka
+```shell
+cd ~/kafka
+bin/kafka-server-start.sh config/kraft/server.properties
+```
+WSL — create/list topic
+```shell
+cd ~/kafka
+bin/kafka-topics.sh --bootstrap-server 127.0.0.1:9092 --create --topic pokemon_battles --partitions 1 --replication-factor 1
+bin/kafka-topics.sh --bootstrap-server 127.0.0.1:9092 --list
+```
+Windows — venv & deps
+```shell
+cd C:\Projects\buzzline-02-data-git-hub
+py -3.11 -m venv .venv
+. .\.venv\Scripts\Activate.ps1
+py -m pip install --upgrade pip wheel setuptools
+py -m pip install --upgrade -r requirements.txt
+```
+Windows — env vars (loopback)
+```shell
+$env:KAFKA_BROKER_ADDRESS="127.0.0.1:9092"
+$env:KAFKA_TOPIC="pokemon_battles"
+$env:KAFKA_API_VERSION="3.5.0"
+$env:MESSAGE_INTERVAL_SECONDS="1"
+```
+Windows — env vars (WSL IP)
+```shell
+$ip = (wsl.exe hostname -I).Split()[0]
+$env:KAFKA_BROKER_ADDRESS="$ip:9092"
+```
+Run consumer (terminal #1)
+```shell
+py -m consumers.kafka_consumer_pokemon
+```
+Run producer (terminal #2)
+```shell
+py -m producer.kafka_producer_pokemon
+```
+
+---
+
+Repo Map (for reference)
+```shell
+producers/kafka_producer_pokemon.py     # Emits JSON battle events
+consumers/kafka_consumer_pokemon.py     # Applies HP/KO logic, logs metrics
+utils/utils_logger.py                   # Centralized logging (Loguru)
+utils/utils_producer.py                 # Kafka helpers (producer, topic, readiness)
+utils/utils_consumer.py                 # Kafka consumer helper
+utils/pokemon_data.py                   # CSV loading & validation
+data/pokemon_attack.csv
+data/pokemon_damage.csv
+data/pokemon_hp.csv
+```
 
 ### Later Work Sessions
 
@@ -428,6 +499,7 @@ When resuming work on this project:
 1. Open the folder in VS Code.
 2. Start the Kafka service.
 3. Activate your local project virtual environment (.venv).
+4. Start consumer then producer.
 
 ### Save Space
 
