@@ -1,0 +1,382 @@
+2025-09-05 19:16:01.414 | INFO     | utils.utils_logger:<module>:90 - Logging to file: C:\Projects\buzzline-02-data-git-hub\logs\project_log-consumer.log
+2025-09-05 19:16:01.414 | INFO     | utils.utils_logger:<module>:91 - Log sanitization enabled, personal info will be removed
+2025-09-05 19:16:01.478 | INFO     | __main__:main:160 - START kafka_consumer_pokemon
+2025-09-05 19:16:01.480 | WARNING  | utils.pokemon_data:_load_attack_matrix:69 - First cell of header in C:\Projects\buzzline-02-data-git-hub\data\pokemon_attack.csv is '﻿', expected '' or 'Move'
+2025-09-05 19:16:01.480 | INFO     | utils.pokemon_data:load_all:199 - Loaded Pokémon data successfully.
+2025-09-05 19:16:01.481 | INFO     | utils.pokemon_data:load_all:200 - Species: ['Bulbasaur', 'Charmander', 'Eevee', 'Gengar', 'Jigglypuff', 'Mewtwo', 'Pikachu', 'Snorlax', 'Squirtle']
+2025-09-05 19:16:01.481 | INFO     | utils.pokemon_data:load_all:201 - Moves: ['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Quick Attack', 'Shadow Ball', 'Sing', 'Thunderbolt', 'Vine Whip', 'Water Gun']
+2025-09-05 19:16:01.481 | INFO     | utils.pokemon_data:load_all:204 - Bulbasaur: HP=105, legal_moves=['Body Slam', 'Mimic', 'Psychic', 'Shadow Ball', 'Vine Whip']
+2025-09-05 19:16:01.481 | INFO     | utils.pokemon_data:load_all:204 - Charmander: HP=99, legal_moves=['Body Slam', 'Flamethrower', 'Mimic', 'Psychic', 'Shadow Ball']
+2025-09-05 19:16:01.481 | INFO     | utils.pokemon_data:load_all:204 - Eevee: HP=115, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Quick Attack', 'Shadow Ball', 'Thunderbolt', 'Water Gun']
+2025-09-05 19:16:01.482 | INFO     | utils.pokemon_data:load_all:204 - Gengar: HP=120, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Thunderbolt']
+2025-09-05 19:16:01.482 | INFO     | utils.pokemon_data:load_all:204 - Jigglypuff: HP=178, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Sing', 'Thunderbolt', 'Water Gun']
+2025-09-05 19:16:01.482 | INFO     | utils.pokemon_data:load_all:204 - Mewtwo: HP=166, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Thunderbolt', 'Water Gun']
+2025-09-05 19:16:01.482 | INFO     | utils.pokemon_data:load_all:204 - Pikachu: HP=95, legal_moves=['Body Slam', 'Hyper Beam', 'Mimic', 'Psychic', 'Quick Attack', 'Shadow Ball', 'Thunderbolt']
+2025-09-05 19:16:01.482 | INFO     | utils.pokemon_data:load_all:204 - Snorlax: HP=220, legal_moves=['Body Slam', 'Flamethrower', 'Hyper Beam', 'Mimic', 'Psychic', 'Shadow Ball', 'Thunderbolt', 'Water Gun']
+2025-09-05 19:16:01.482 | INFO     | utils.pokemon_data:load_all:204 - Squirtle: HP=104, legal_moves=['Body Slam', 'Mimic', 'Psychic', 'Shadow Ball', 'Water Gun']
+2025-09-05 19:16:01.482 | INFO     | __main__:get_kafka_topic:55 - [CONSUMER] Kafka topic: pokemon_battles
+2025-09-05 19:16:01.483 | INFO     | __main__:get_group_id:61 - [CONSUMER] Group ID: pokemon_group
+2025-09-05 19:16:01.483 | INFO     | utils.utils_producer:get_kafka_broker_address:29 - Kafka broker address: localhost:9092
+2025-09-05 19:16:01.483 | INFO     | utils.utils_producer:get_kafka_api_version:42 - Kafka API version override: (3, 5, 0)
+2025-09-05 19:16:01.483 | INFO     | utils.utils_consumer:create_kafka_consumer:24 - Creating Kafka consumer. Topic='pokemon_battles' and group ID='pokemon_group'.
+2025-09-05 19:16:01.484 | INFO     | utils.utils_consumer:create_kafka_consumer:37 - Kafka consumer created successfully.
+2025-09-05 19:16:01.484 | INFO     | __main__:main:190 - [CONSUMER] Polling topic 'pokemon_battles'...
+2025-09-05 19:16:05.002 | INFO     | __main__:main:208 - Pikachu uses Shadow Ball that does 15 damage to Gengar. Gengar has 48 HP left!
+2025-09-05 19:16:05.002 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Gengar. Gengar has 48 HP left!
+2025-09-05 19:16:05.002 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 12 damage to Gengar. Gengar has 36 HP left!
+2025-09-05 19:16:05.002 | INFO     | __main__:main:208 - Pikachu uses Psychic that does 17 damage to Gengar. Gengar has 19 HP left!
+2025-09-05 19:16:05.002 | INFO     | __main__:main:208 - Pikachu uses Body Slam that does 29 damage to Eevee. Eevee has 86 HP left!
+2025-09-05 19:16:05.003 | INFO     | __main__:main:208 - Pikachu uses Psychic that does 16 damage to Eevee. Eevee has 70 HP left!
+2025-09-05 19:16:05.003 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 12 damage to Eevee. Eevee has 58 HP left!
+2025-09-05 19:16:05.003 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 14 damage to Eevee. Eevee has 44 HP left!
+2025-09-05 19:16:05.003 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Eevee. Eevee has 44 HP left!
+2025-09-05 19:16:05.004 | INFO     | __main__:main:208 - Pikachu uses Psychic that does 16 damage to Eevee. Eevee has 28 HP left!
+2025-09-05 19:16:05.004 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Eevee. Eevee has 28 HP left!
+2025-09-05 19:16:05.004 | INFO     | __main__:main:208 - Pikachu uses Psychic that does 16 damage to Eevee. Eevee has 12 HP left!
+2025-09-05 19:16:05.004 | INFO     | __main__:main:208 - Pikachu uses Thunderbolt that does 12 damage to Eevee. Eevee has 0 HP left!
+2025-09-05 19:16:05.004 | INFO     | __main__:main:230 - Pikachu knocks out Eevee and wins the battle (a453260c)!
+2025-09-05 19:16:05.004 | INFO     | __main__:main:208 - Pikachu uses Psychic that does 31 damage to Snorlax. Snorlax has 189 HP left!
+2025-09-05 19:16:05.005 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 28 damage to Snorlax. Snorlax has 161 HP left!
+2025-09-05 19:16:05.139 | INFO     | __main__:main:208 - Pikachu uses Psychic that does 31 damage to Snorlax. Snorlax has 130 HP left!
+2025-09-05 19:16:06.141 | INFO     | __main__:main:208 - Pikachu uses Shadow Ball that does 28 damage to Snorlax. Snorlax has 102 HP left!
+2025-09-05 19:16:07.144 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Snorlax. Snorlax has 102 HP left!
+2025-09-05 19:16:08.146 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 28 damage to Snorlax. Snorlax has 74 HP left!
+2025-09-05 19:16:09.148 | INFO     | __main__:main:208 - Pikachu uses Psychic that does 31 damage to Snorlax. Snorlax has 43 HP left!
+2025-09-05 19:16:10.150 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 22 damage to Snorlax. Snorlax has 21 HP left!
+2025-09-05 19:16:11.153 | INFO     | __main__:main:208 - Pikachu uses Shadow Ball that does 28 damage to Snorlax. Snorlax has 0 HP left!
+2025-09-05 19:16:12.156 | INFO     | __main__:main:230 - Pikachu knocks out Snorlax and wins the battle (d0f19992)!
+2025-09-05 19:16:12.157 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 14 damage to Eevee. Eevee has 101 HP left!
+2025-09-05 19:16:13.159 | INFO     | __main__:main:208 - Charmander uses Body Slam that does 29 damage to Eevee. Eevee has 72 HP left!
+2025-09-05 19:16:14.161 | INFO     | __main__:main:208 - Charmander uses Flamethrower that does 39 damage to Eevee. Eevee has 33 HP left!
+2025-09-05 19:16:15.164 | INFO     | __main__:main:208 - Charmander uses Mimic that does 0 damage to Eevee. Eevee has 33 HP left!
+2025-09-05 19:16:16.165 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 14 damage to Eevee. Eevee has 19 HP left!
+2025-09-05 19:16:17.168 | INFO     | __main__:main:208 - Charmander uses Mimic that does 0 damage to Eevee. Eevee has 19 HP left!
+2025-09-05 19:16:17.168 | INFO     | __main__:main:265 - [METRICS last 60s][KOs] total=2
+2025-09-05 19:16:18.170 | INFO     | __main__:main:208 - Charmander uses Psychic that does 16 damage to Eevee. Eevee has 3 HP left!
+2025-09-05 19:16:19.172 | INFO     | __main__:main:208 - Charmander uses Mimic that does 0 damage to Eevee. Eevee has 3 HP left!
+2025-09-05 19:16:20.175 | INFO     | __main__:main:208 - Charmander uses Flamethrower that does 39 damage to Eevee. Eevee has 0 HP left!
+2025-09-05 19:16:21.178 | INFO     | __main__:main:230 - Charmander knocks out Eevee and wins the battle (7aaa691b)!
+2025-09-05 19:16:21.179 | INFO     | __main__:main:208 - Mewtwo uses Psychic that does 14 damage to Charmander. Charmander has 85 HP left!
+2025-09-05 19:16:22.181 | INFO     | __main__:main:208 - Mewtwo uses Hyper Beam that does 12 damage to Charmander. Charmander has 73 HP left!
+2025-09-05 19:16:23.183 | INFO     | __main__:main:208 - Mewtwo uses Water Gun that does 17 damage to Charmander. Charmander has 56 HP left!
+2025-09-05 19:16:24.185 | INFO     | __main__:main:208 - Mewtwo uses Shadow Ball that does 12 damage to Charmander. Charmander has 44 HP left!
+2025-09-05 19:16:25.187 | INFO     | __main__:main:208 - Mewtwo uses Flamethrower that does 33 damage to Charmander. Charmander has 11 HP left!
+2025-09-05 19:16:26.190 | INFO     | __main__:main:208 - Mewtwo uses Shadow Ball that does 12 damage to Charmander. Charmander has 0 HP left!
+2025-09-05 19:16:27.192 | INFO     | __main__:main:230 - Mewtwo knocks out Charmander and wins the battle (e391c699)!
+2025-09-05 19:16:27.193 | INFO     | __main__:main:208 - Mewtwo uses Thunderbolt that does 18 damage to Jigglypuff. Jigglypuff has 160 HP left!
+2025-09-05 19:16:28.195 | INFO     | __main__:main:208 - Mewtwo uses Water Gun that does 30 damage to Jigglypuff. Jigglypuff has 130 HP left!
+2025-09-05 19:16:29.197 | INFO     | __main__:main:208 - Mewtwo uses Water Gun that does 30 damage to Jigglypuff. Jigglypuff has 100 HP left!
+2025-09-05 19:16:30.200 | INFO     | __main__:main:208 - Mewtwo uses Flamethrower that does 59 damage to Jigglypuff. Jigglypuff has 41 HP left!
+2025-09-05 19:16:31.202 | INFO     | __main__:main:208 - Mewtwo uses Hyper Beam that does 22 damage to Jigglypuff. Jigglypuff has 19 HP left!
+2025-09-05 19:16:32.204 | INFO     | __main__:main:208 - Mewtwo uses Thunderbolt that does 18 damage to Jigglypuff. Jigglypuff has 1 HP left!
+2025-09-05 19:16:32.204 | INFO     | __main__:main:269 - [METRICS last 60s][Most Damage Given] Pikachu with 342
+2025-09-05 19:16:33.207 | INFO     | __main__:main:208 - Mewtwo uses Body Slam that does 45 damage to Jigglypuff. Jigglypuff has 0 HP left!
+2025-09-05 19:16:34.209 | INFO     | __main__:main:230 - Mewtwo knocks out Jigglypuff and wins the battle (3c95de97)!
+2025-09-05 19:16:34.210 | INFO     | __main__:main:208 - Eevee uses Quick Attack that does 10 damage to Pikachu. Pikachu has 85 HP left!
+2025-09-05 19:16:35.213 | INFO     | __main__:main:208 - Eevee uses Thunderbolt that does 10 damage to Pikachu. Pikachu has 75 HP left!
+2025-09-05 19:16:36.215 | INFO     | __main__:main:208 - Eevee uses Water Gun that does 16 damage to Pikachu. Pikachu has 59 HP left!
+2025-09-05 19:16:37.217 | INFO     | __main__:main:208 - Eevee uses Shadow Ball that does 12 damage to Pikachu. Pikachu has 47 HP left!
+2025-09-05 19:16:38.219 | INFO     | __main__:main:208 - Eevee uses Thunderbolt that does 10 damage to Pikachu. Pikachu has 37 HP left!
+2025-09-05 19:16:39.221 | INFO     | __main__:main:208 - Eevee uses Water Gun that does 16 damage to Pikachu. Pikachu has 21 HP left!
+2025-09-05 19:16:40.223 | INFO     | __main__:main:208 - Eevee uses Quick Attack that does 10 damage to Pikachu. Pikachu has 11 HP left!
+2025-09-05 19:16:41.226 | INFO     | __main__:main:208 - Eevee uses Flamethrower that does 21 damage to Pikachu. Pikachu has 0 HP left!
+2025-09-05 19:16:42.228 | INFO     | __main__:main:230 - Eevee knocks out Pikachu and wins the battle (2ac318f4)!
+2025-09-05 19:16:42.229 | INFO     | __main__:main:208 - Gengar uses Mimic that does 0 damage to Eevee. Eevee has 115 HP left!
+2025-09-05 19:16:43.231 | INFO     | __main__:main:208 - Gengar uses Body Slam that does 29 damage to Eevee. Eevee has 86 HP left!
+2025-09-05 19:16:44.232 | INFO     | __main__:main:208 - Gengar uses Shadow Ball that does 14 damage to Eevee. Eevee has 72 HP left!
+2025-09-05 19:16:45.235 | INFO     | __main__:main:208 - Gengar uses Thunderbolt that does 12 damage to Eevee. Eevee has 60 HP left!
+2025-09-05 19:16:46.237 | INFO     | __main__:main:208 - Gengar uses Psychic that does 16 damage to Eevee. Eevee has 44 HP left!
+2025-09-05 19:16:47.239 | INFO     | __main__:main:208 - Gengar uses Psychic that does 16 damage to Eevee. Eevee has 28 HP left!
+2025-09-05 19:16:47.239 | INFO     | __main__:main:275 - [METRICS last 60s][Most Damage Received] Eevee with 353
+2025-09-05 19:16:48.242 | INFO     | __main__:main:208 - Gengar uses Shadow Ball that does 14 damage to Eevee. Eevee has 14 HP left!
+2025-09-05 19:16:49.243 | INFO     | __main__:main:208 - Gengar uses Psychic that does 16 damage to Eevee. Eevee has 0 HP left!
+2025-09-05 19:16:50.246 | INFO     | __main__:main:230 - Gengar knocks out Eevee and wins the battle (1c87943e)!
+2025-09-05 19:16:50.247 | INFO     | __main__:main:208 - Bulbasaur uses Shadow Ball that does 13 damage to Squirtle. Squirtle has 91 HP left!
+2025-09-05 19:16:51.249 | INFO     | __main__:main:208 - Bulbasaur uses Mimic that does 0 damage to Squirtle. Squirtle has 91 HP left!
+2025-09-05 19:16:52.252 | INFO     | __main__:main:208 - Bulbasaur uses Psychic that does 15 damage to Squirtle. Squirtle has 76 HP left!
+2025-09-05 19:16:53.253 | INFO     | __main__:main:208 - Bulbasaur uses Body Slam that does 26 damage to Squirtle. Squirtle has 50 HP left!
+2025-09-05 19:16:54.256 | INFO     | __main__:main:208 - Bulbasaur uses Mimic that does 0 damage to Squirtle. Squirtle has 50 HP left!
+2025-09-05 19:16:55.258 | INFO     | __main__:main:208 - Bulbasaur uses Psychic that does 15 damage to Squirtle. Squirtle has 35 HP left!
+2025-09-05 19:16:56.261 | INFO     | __main__:main:208 - Bulbasaur uses Mimic that does 0 damage to Squirtle. Squirtle has 35 HP left!
+2025-09-05 19:16:57.263 | INFO     | __main__:main:208 - Bulbasaur uses Shadow Ball that does 13 damage to Squirtle. Squirtle has 22 HP left!
+2025-09-05 19:16:58.265 | INFO     | __main__:main:208 - Bulbasaur uses Mimic that does 0 damage to Squirtle. Squirtle has 22 HP left!
+2025-09-05 19:16:59.267 | INFO     | __main__:main:208 - Bulbasaur uses Psychic that does 15 damage to Squirtle. Squirtle has 7 HP left!
+2025-09-05 19:17:00.270 | INFO     | __main__:main:208 - Bulbasaur uses Vine Whip that does 17 damage to Squirtle. Squirtle has 0 HP left!
+2025-09-05 19:17:01.272 | INFO     | __main__:main:230 - Bulbasaur knocks out Squirtle and wins the battle (3b1d3c26)!
+2025-09-05 19:17:01.273 | INFO     | __main__:main:208 - Squirtle uses Water Gun that does 30 damage to Jigglypuff. Jigglypuff has 148 HP left!
+2025-09-05 19:17:02.275 | INFO     | __main__:main:208 - Squirtle uses Water Gun that does 30 damage to Jigglypuff. Jigglypuff has 118 HP left!
+2025-09-05 19:17:02.275 | INFO     | __main__:main:281 - [METRICS last 60s][Avg Damage] 18.27 | [Legality] 100.0% legal
+2025-09-05 19:17:03.278 | INFO     | __main__:main:208 - Squirtle uses Psychic that does 25 damage to Jigglypuff. Jigglypuff has 93 HP left!
+2025-09-05 19:17:04.280 | INFO     | __main__:main:208 - Squirtle uses Mimic that does 0 damage to Jigglypuff. Jigglypuff has 93 HP left!
+2025-09-05 19:17:05.282 | INFO     | __main__:main:208 - Squirtle uses Mimic that does 0 damage to Jigglypuff. Jigglypuff has 93 HP left!
+2025-09-05 19:17:06.285 | INFO     | __main__:main:208 - Squirtle uses Shadow Ball that does 22 damage to Jigglypuff. Jigglypuff has 71 HP left!
+2025-09-05 19:17:07.288 | INFO     | __main__:main:208 - Squirtle uses Body Slam that does 45 damage to Jigglypuff. Jigglypuff has 26 HP left!
+2025-09-05 19:17:08.289 | INFO     | __main__:main:208 - Squirtle uses Body Slam that does 45 damage to Jigglypuff. Jigglypuff has 0 HP left!
+2025-09-05 19:17:09.292 | INFO     | __main__:main:230 - Squirtle knocks out Jigglypuff and wins the battle (accb75f1)!
+2025-09-05 19:17:09.293 | INFO     | __main__:main:208 - Eevee uses Flamethrower that does 55 damage to Mewtwo. Mewtwo has 111 HP left!
+2025-09-05 19:17:10.295 | INFO     | __main__:main:208 - Eevee uses Thunderbolt that does 17 damage to Mewtwo. Mewtwo has 94 HP left!
+2025-09-05 19:17:11.297 | INFO     | __main__:main:208 - Eevee uses Quick Attack that does 17 damage to Mewtwo. Mewtwo has 77 HP left!
+2025-09-05 19:17:12.300 | INFO     | __main__:main:208 - Eevee uses Psychic that does 24 damage to Mewtwo. Mewtwo has 53 HP left!
+2025-09-05 19:17:13.301 | INFO     | __main__:main:208 - Eevee uses Hyper Beam that does 21 damage to Mewtwo. Mewtwo has 32 HP left!
+2025-09-05 19:17:14.305 | INFO     | __main__:main:208 - Eevee uses Quick Attack that does 17 damage to Mewtwo. Mewtwo has 15 HP left!
+2025-09-05 19:17:15.306 | INFO     | __main__:main:208 - Eevee uses Hyper Beam that does 21 damage to Mewtwo. Mewtwo has 0 HP left!
+2025-09-05 19:17:16.309 | INFO     | __main__:main:230 - Eevee knocks out Mewtwo and wins the battle (b24974eb)!
+2025-09-05 19:17:16.310 | INFO     | __main__:main:208 - Jigglypuff uses Flamethrower that does 39 damage to Eevee. Eevee has 76 HP left!
+2025-09-05 19:17:17.312 | INFO     | __main__:main:208 - Jigglypuff uses Water Gun that does 19 damage to Eevee. Eevee has 57 HP left!
+2025-09-05 19:17:17.312 | INFO     | __main__:main:265 - [METRICS last 60s][KOs] total=8
+2025-09-05 19:17:18.315 | INFO     | __main__:main:208 - Jigglypuff uses Mimic that does 0 damage to Eevee. Eevee has 57 HP left!
+2025-09-05 19:17:19.316 | INFO     | __main__:main:208 - Jigglypuff uses Psychic that does 16 damage to Eevee. Eevee has 41 HP left!
+2025-09-05 19:17:20.319 | INFO     | __main__:main:208 - Jigglypuff uses Mimic that does 0 damage to Eevee. Eevee has 41 HP left!
+2025-09-05 19:17:21.322 | INFO     | __main__:main:208 - Jigglypuff uses Hyper Beam that does 14 damage to Eevee. Eevee has 27 HP left!
+2025-09-05 19:17:22.324 | INFO     | __main__:main:208 - Jigglypuff uses Sing that does 0 damage to Eevee. Eevee has 27 HP left!
+2025-09-05 19:17:23.326 | INFO     | __main__:main:208 - Jigglypuff uses Mimic that does 0 damage to Eevee. Eevee has 27 HP left!
+2025-09-05 19:17:24.327 | INFO     | __main__:main:208 - Jigglypuff uses Hyper Beam that does 14 damage to Eevee. Eevee has 13 HP left!
+2025-09-05 19:17:25.330 | INFO     | __main__:main:208 - Jigglypuff uses Psychic that does 16 damage to Eevee. Eevee has 0 HP left!
+2025-09-05 19:17:26.332 | INFO     | __main__:main:230 - Jigglypuff knocks out Eevee and wins the battle (508ea1dd)!
+2025-09-05 19:17:26.333 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 22 damage to Jigglypuff. Jigglypuff has 156 HP left!
+2025-09-05 19:17:27.336 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 22 damage to Jigglypuff. Jigglypuff has 134 HP left!
+2025-09-05 19:17:28.338 | INFO     | __main__:main:208 - Charmander uses Psychic that does 25 damage to Jigglypuff. Jigglypuff has 109 HP left!
+2025-09-05 19:17:29.340 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 22 damage to Jigglypuff. Jigglypuff has 87 HP left!
+2025-09-05 19:17:30.343 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 22 damage to Jigglypuff. Jigglypuff has 65 HP left!
+2025-09-05 19:17:31.344 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 22 damage to Jigglypuff. Jigglypuff has 43 HP left!
+2025-09-05 19:17:32.346 | INFO     | __main__:main:208 - Charmander uses Body Slam that does 45 damage to Jigglypuff. Jigglypuff has 0 HP left!
+2025-09-05 19:17:32.347 | INFO     | __main__:main:269 - [METRICS last 60s][Most Damage Given] Eevee with 277
+2025-09-05 19:17:33.349 | INFO     | __main__:main:230 - Charmander knocks out Jigglypuff and wins the battle (9e262169)!
+2025-09-05 19:17:33.351 | INFO     | __main__:main:208 - Charmander uses Flamethrower that does 40 damage to Gengar. Gengar has 80 HP left!
+2025-09-05 19:17:34.352 | INFO     | __main__:main:208 - Charmander uses Psychic that does 17 damage to Gengar. Gengar has 63 HP left!
+2025-09-05 19:17:35.355 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 15 damage to Gengar. Gengar has 48 HP left!
+2025-09-05 19:17:36.358 | INFO     | __main__:main:208 - Charmander uses Flamethrower that does 40 damage to Gengar. Gengar has 8 HP left!
+2025-09-05 19:17:37.361 | INFO     | __main__:main:208 - Charmander uses Flamethrower that does 40 damage to Gengar. Gengar has 0 HP left!
+2025-09-05 19:17:38.363 | INFO     | __main__:main:230 - Charmander knocks out Gengar and wins the battle (310efe99)!
+2025-09-05 19:17:38.364 | INFO     | __main__:main:208 - Mewtwo uses Thunderbolt that does 18 damage to Jigglypuff. Jigglypuff has 160 HP left!
+2025-09-05 19:17:39.367 | INFO     | __main__:main:208 - Mewtwo uses Water Gun that does 30 damage to Jigglypuff. Jigglypuff has 130 HP left!
+2025-09-05 19:17:40.369 | INFO     | __main__:main:208 - Mewtwo uses Body Slam that does 45 damage to Jigglypuff. Jigglypuff has 85 HP left!
+2025-09-05 19:17:41.371 | INFO     | __main__:main:208 - Mewtwo uses Flamethrower that does 59 damage to Jigglypuff. Jigglypuff has 26 HP left!
+2025-09-05 19:17:42.373 | INFO     | __main__:main:208 - Mewtwo uses Body Slam that does 45 damage to Jigglypuff. Jigglypuff has 0 HP left!
+2025-09-05 19:17:43.376 | INFO     | __main__:main:230 - Mewtwo knocks out Jigglypuff and wins the battle (11628a32)!
+2025-09-05 19:17:43.377 | INFO     | __main__:main:208 - Squirtle uses Psychic that does 15 damage to Bulbasaur. Bulbasaur has 90 HP left!
+2025-09-05 19:17:44.379 | INFO     | __main__:main:208 - Squirtle uses Body Slam that does 27 damage to Bulbasaur. Bulbasaur has 63 HP left!
+2025-09-05 19:17:45.381 | INFO     | __main__:main:208 - Squirtle uses Water Gun that does 18 damage to Bulbasaur. Bulbasaur has 45 HP left!
+2025-09-05 19:17:46.384 | INFO     | __main__:main:208 - Squirtle uses Mimic that does 0 damage to Bulbasaur. Bulbasaur has 45 HP left!
+2025-09-05 19:17:47.386 | INFO     | __main__:main:208 - Squirtle uses Mimic that does 0 damage to Bulbasaur. Bulbasaur has 45 HP left!
+2025-09-05 19:17:47.386 | INFO     | __main__:main:275 - [METRICS last 60s][Most Damage Received] Jigglypuff with 574
+2025-09-05 19:17:48.388 | INFO     | __main__:main:208 - Squirtle uses Body Slam that does 27 damage to Bulbasaur. Bulbasaur has 18 HP left!
+2025-09-05 19:17:49.390 | INFO     | __main__:main:208 - Squirtle uses Water Gun that does 18 damage to Bulbasaur. Bulbasaur has 0 HP left!
+2025-09-05 19:17:50.392 | INFO     | __main__:main:230 - Squirtle knocks out Bulbasaur and wins the battle (dce1df4a)!
+2025-09-05 19:17:50.394 | INFO     | __main__:main:208 - Gengar uses Flamethrower that does 35 damage to Squirtle. Squirtle has 69 HP left!
+2025-09-05 19:17:51.396 | INFO     | __main__:main:208 - Gengar uses Flamethrower that does 35 damage to Squirtle. Squirtle has 34 HP left!
+2025-09-05 19:17:52.399 | INFO     | __main__:main:208 - Gengar uses Psychic that does 15 damage to Squirtle. Squirtle has 19 HP left!
+2025-09-05 19:17:53.402 | INFO     | __main__:main:208 - Gengar uses Psychic that does 15 damage to Squirtle. Squirtle has 4 HP left!
+2025-09-05 19:17:54.404 | INFO     | __main__:main:208 - Gengar uses Psychic that does 15 damage to Squirtle. Squirtle has 0 HP left!
+2025-09-05 19:17:55.406 | INFO     | __main__:main:230 - Gengar knocks out Squirtle and wins the battle (675e2a6d)!
+2025-09-05 19:17:55.407 | INFO     | __main__:main:208 - Eevee uses Body Slam that does 24 damage to Pikachu. Pikachu has 71 HP left!
+2025-09-05 19:17:56.410 | INFO     | __main__:main:208 - Eevee uses Hyper Beam that does 12 damage to Pikachu. Pikachu has 59 HP left!
+2025-09-05 19:17:57.412 | INFO     | __main__:main:208 - Eevee uses Hyper Beam that does 12 damage to Pikachu. Pikachu has 47 HP left!
+2025-09-05 19:17:58.414 | INFO     | __main__:main:208 - Eevee uses Psychic that does 14 damage to Pikachu. Pikachu has 33 HP left!
+2025-09-05 19:17:59.417 | INFO     | __main__:main:208 - Eevee uses Hyper Beam that does 12 damage to Pikachu. Pikachu has 21 HP left!
+2025-09-05 19:18:00.419 | INFO     | __main__:main:208 - Eevee uses Thunderbolt that does 10 damage to Pikachu. Pikachu has 11 HP left!
+2025-09-05 19:18:01.421 | INFO     | __main__:main:208 - Eevee uses Shadow Ball that does 12 damage to Pikachu. Pikachu has 0 HP left!
+2025-09-05 19:18:02.424 | INFO     | __main__:main:230 - Eevee knocks out Pikachu and wins the battle (9309fc4d)!
+2025-09-05 19:18:02.424 | INFO     | __main__:main:281 - [METRICS last 60s][Avg Damage] 21.56 | [Legality] 100.0% legal
+2025-09-05 19:18:02.425 | INFO     | __main__:main:208 - Snorlax uses Flamethrower that does 39 damage to Eevee. Eevee has 76 HP left!
+2025-09-05 19:18:03.428 | INFO     | __main__:main:208 - Snorlax uses Water Gun that does 19 damage to Eevee. Eevee has 57 HP left!
+2025-09-05 19:18:04.430 | INFO     | __main__:main:208 - Snorlax uses Hyper Beam that does 14 damage to Eevee. Eevee has 43 HP left!
+2025-09-05 19:18:05.432 | INFO     | __main__:main:208 - Snorlax uses Hyper Beam that does 14 damage to Eevee. Eevee has 29 HP left!
+2025-09-05 19:18:06.435 | INFO     | __main__:main:208 - Snorlax uses Psychic that does 16 damage to Eevee. Eevee has 13 HP left!
+2025-09-05 19:18:07.437 | INFO     | __main__:main:208 - Snorlax uses Psychic that does 16 damage to Eevee. Eevee has 0 HP left!
+2025-09-05 19:18:08.439 | INFO     | __main__:main:230 - Snorlax knocks out Eevee and wins the battle (686c85ba)!
+2025-09-05 19:18:08.440 | INFO     | __main__:main:208 - Mewtwo uses Thunderbolt that does 22 damage to Snorlax. Snorlax has 198 HP left!
+2025-09-05 19:18:09.443 | INFO     | __main__:main:208 - Mewtwo uses Mimic that does 0 damage to Snorlax. Snorlax has 198 HP left!
+2025-09-05 19:18:10.445 | INFO     | __main__:main:208 - Mewtwo uses Body Slam that does 55 damage to Snorlax. Snorlax has 143 HP left!
+2025-09-05 19:18:11.447 | INFO     | __main__:main:208 - Mewtwo uses Water Gun that does 36 damage to Snorlax. Snorlax has 107 HP left!
+2025-09-05 19:18:12.450 | INFO     | __main__:main:208 - Mewtwo uses Water Gun that does 36 damage to Snorlax. Snorlax has 71 HP left!
+2025-09-05 19:18:13.451 | INFO     | __main__:main:208 - Mewtwo uses Flamethrower that does 73 damage to Snorlax. Snorlax has 0 HP left!
+2025-09-05 19:18:14.454 | INFO     | __main__:main:230 - Mewtwo knocks out Snorlax and wins the battle (2fb998a3)!
+2025-09-05 19:18:14.455 | INFO     | __main__:main:208 - Mewtwo uses Water Gun that does 16 damage to Pikachu. Pikachu has 79 HP left!
+2025-09-05 19:18:15.456 | INFO     | __main__:main:208 - Mewtwo uses Flamethrower that does 21 damage to Pikachu. Pikachu has 58 HP left!
+2025-09-05 19:18:16.459 | INFO     | __main__:main:208 - Mewtwo uses Thunderbolt that does 10 damage to Pikachu. Pikachu has 48 HP left!
+2025-09-05 19:18:17.461 | INFO     | __main__:main:208 - Mewtwo uses Flamethrower that does 21 damage to Pikachu. Pikachu has 27 HP left!
+2025-09-05 19:18:17.461 | INFO     | __main__:main:265 - [METRICS last 60s][KOs] total=9
+2025-09-05 19:18:18.464 | INFO     | __main__:main:208 - Mewtwo uses Thunderbolt that does 10 damage to Pikachu. Pikachu has 17 HP left!
+2025-09-05 19:18:19.466 | INFO     | __main__:main:208 - Mewtwo uses Shadow Ball that does 12 damage to Pikachu. Pikachu has 5 HP left!
+2025-09-05 19:18:20.468 | INFO     | __main__:main:208 - Mewtwo uses Mimic that does 0 damage to Pikachu. Pikachu has 5 HP left!
+2025-09-05 19:18:21.470 | INFO     | __main__:main:208 - Mewtwo uses Thunderbolt that does 10 damage to Pikachu. Pikachu has 0 HP left!
+2025-09-05 19:18:22.473 | INFO     | __main__:main:230 - Mewtwo knocks out Pikachu and wins the battle (f72bf740)!
+2025-09-05 19:18:22.474 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Squirtle. Squirtle has 104 HP left!
+2025-09-05 19:18:23.477 | INFO     | __main__:main:208 - Pikachu uses Psychic that does 15 damage to Squirtle. Squirtle has 89 HP left!
+2025-09-05 19:18:24.478 | INFO     | __main__:main:208 - Pikachu uses Shadow Ball that does 13 damage to Squirtle. Squirtle has 76 HP left!
+2025-09-05 19:18:25.481 | INFO     | __main__:main:208 - Pikachu uses Shadow Ball that does 13 damage to Squirtle. Squirtle has 63 HP left!
+2025-09-05 19:18:26.483 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 10 damage to Squirtle. Squirtle has 53 HP left!
+2025-09-05 19:18:27.485 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Squirtle. Squirtle has 53 HP left!
+2025-09-05 19:18:28.487 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Squirtle. Squirtle has 53 HP left!
+2025-09-05 19:18:29.489 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Squirtle. Squirtle has 53 HP left!
+2025-09-05 19:18:30.491 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 13 damage to Squirtle. Squirtle has 40 HP left!
+2025-09-05 19:18:31.494 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 13 damage to Squirtle. Squirtle has 27 HP left!
+2025-09-05 19:18:31.494 | INFO     | __main__:main:269 - [METRICS last 60s][Most Damage Given] Mewtwo with 519
+2025-09-05 19:18:32.495 | INFO     | __main__:main:208 - Pikachu uses Shadow Ball that does 13 damage to Squirtle. Squirtle has 14 HP left!
+2025-09-05 19:18:33.498 | INFO     | __main__:main:208 - Pikachu uses Thunderbolt that does 10 damage to Squirtle. Squirtle has 4 HP left!
+2025-09-05 19:18:34.501 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 10 damage to Squirtle. Squirtle has 0 HP left!
+2025-09-05 19:18:35.503 | INFO     | __main__:main:230 - Pikachu knocks out Squirtle and wins the battle (df9e9cdf)!
+2025-09-05 19:18:35.504 | INFO     | __main__:main:208 - Mewtwo uses Hyper Beam that does 13 damage to Squirtle. Squirtle has 91 HP left!
+2025-09-05 19:18:36.506 | INFO     | __main__:main:208 - Mewtwo uses Shadow Ball that does 13 damage to Squirtle. Squirtle has 78 HP left!
+2025-09-05 19:18:37.509 | INFO     | __main__:main:208 - Mewtwo uses Hyper Beam that does 13 damage to Squirtle. Squirtle has 65 HP left!
+2025-09-05 19:18:38.510 | INFO     | __main__:main:208 - Mewtwo uses Water Gun that does 17 damage to Squirtle. Squirtle has 48 HP left!
+2025-09-05 19:18:39.512 | INFO     | __main__:main:208 - Mewtwo uses Body Slam that does 26 damage to Squirtle. Squirtle has 22 HP left!
+2025-09-05 19:18:40.515 | INFO     | __main__:main:208 - Mewtwo uses Body Slam that does 26 damage to Squirtle. Squirtle has 0 HP left!
+2025-09-05 19:18:41.517 | INFO     | __main__:main:230 - Mewtwo knocks out Squirtle and wins the battle (e01d45e6)!
+2025-09-05 19:18:41.518 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 17 damage to Mewtwo. Mewtwo has 149 HP left!
+2025-09-05 19:18:42.519 | INFO     | __main__:main:208 - Pikachu uses Body Slam that does 42 damage to Mewtwo. Mewtwo has 107 HP left!
+2025-09-05 19:18:43.522 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 21 damage to Mewtwo. Mewtwo has 86 HP left!
+2025-09-05 19:18:44.524 | INFO     | __main__:main:208 - Pikachu uses Psychic that does 24 damage to Mewtwo. Mewtwo has 62 HP left!
+2025-09-05 19:18:45.527 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 21 damage to Mewtwo. Mewtwo has 41 HP left!
+2025-09-05 19:18:46.529 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Mewtwo. Mewtwo has 41 HP left!
+2025-09-05 19:18:46.529 | INFO     | __main__:main:275 - [METRICS last 60s][Most Damage Received] Squirtle with 333
+2025-09-05 19:18:47.530 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 17 damage to Mewtwo. Mewtwo has 24 HP left!
+2025-09-05 19:18:48.533 | INFO     | __main__:main:208 - Pikachu uses Thunderbolt that does 17 damage to Mewtwo. Mewtwo has 7 HP left!
+2025-09-05 19:18:49.535 | INFO     | __main__:main:208 - Pikachu uses Body Slam that does 42 damage to Mewtwo. Mewtwo has 0 HP left!
+2025-09-05 19:18:50.537 | INFO     | __main__:main:230 - Pikachu knocks out Mewtwo and wins the battle (0dc7965f)!
+2025-09-05 19:18:50.538 | INFO     | __main__:main:208 - Charmander uses Flamethrower that does 35 damage to Squirtle. Squirtle has 69 HP left!
+2025-09-05 19:18:51.540 | INFO     | __main__:main:208 - Charmander uses Body Slam that does 26 damage to Squirtle. Squirtle has 43 HP left!
+2025-09-05 19:18:52.543 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 13 damage to Squirtle. Squirtle has 30 HP left!
+2025-09-05 19:18:53.545 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 13 damage to Squirtle. Squirtle has 17 HP left!
+2025-09-05 19:18:54.548 | INFO     | __main__:main:208 - Charmander uses Mimic that does 0 damage to Squirtle. Squirtle has 17 HP left!
+2025-09-05 19:18:55.549 | INFO     | __main__:main:208 - Charmander uses Body Slam that does 26 damage to Squirtle. Squirtle has 0 HP left!
+2025-09-05 19:18:56.552 | INFO     | __main__:main:230 - Charmander knocks out Squirtle and wins the battle (0c085450)!
+2025-09-05 19:18:56.553 | INFO     | __main__:main:208 - Jigglypuff uses Psychic that does 17 damage to Gengar. Gengar has 103 HP left!
+2025-09-05 19:18:57.554 | INFO     | __main__:main:208 - Jigglypuff uses Hyper Beam that does 15 damage to Gengar. Gengar has 88 HP left!
+2025-09-05 19:18:58.557 | INFO     | __main__:main:208 - Jigglypuff uses Shadow Ball that does 15 damage to Gengar. Gengar has 73 HP left!
+2025-09-05 19:18:59.559 | INFO     | __main__:main:208 - Jigglypuff uses Body Slam that does 30 damage to Gengar. Gengar has 43 HP left!
+2025-09-05 19:19:00.562 | INFO     | __main__:main:208 - Jigglypuff uses Flamethrower that does 40 damage to Gengar. Gengar has 3 HP left!
+2025-09-05 19:19:01.563 | INFO     | __main__:main:208 - Jigglypuff uses Body Slam that does 30 damage to Gengar. Gengar has 0 HP left!
+2025-09-05 19:19:01.564 | INFO     | __main__:main:281 - [METRICS last 60s][Avg Damage] 18.65 | [Legality] 100.0% legal
+2025-09-05 19:19:02.566 | INFO     | __main__:main:230 - Jigglypuff knocks out Gengar and wins the battle (61266de1)!
+2025-09-05 19:19:02.567 | INFO     | __main__:main:208 - Charmander uses Body Slam that does 24 damage to Pikachu. Pikachu has 71 HP left!
+2025-09-05 19:19:03.569 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 12 damage to Pikachu. Pikachu has 59 HP left!
+2025-09-05 19:19:04.571 | INFO     | __main__:main:208 - Charmander uses Flamethrower that does 21 damage to Pikachu. Pikachu has 38 HP left!
+2025-09-05 19:19:05.574 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 12 damage to Pikachu. Pikachu has 26 HP left!
+2025-09-05 19:19:06.575 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 12 damage to Pikachu. Pikachu has 14 HP left!
+2025-09-05 19:19:07.578 | INFO     | __main__:main:208 - Charmander uses Mimic that does 0 damage to Pikachu. Pikachu has 14 HP left!
+2025-09-05 19:19:08.579 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 12 damage to Pikachu. Pikachu has 2 HP left!
+2025-09-05 19:19:09.582 | INFO     | __main__:main:208 - Charmander uses Psychic that does 14 damage to Pikachu. Pikachu has 0 HP left!
+2025-09-05 19:19:10.583 | INFO     | __main__:main:230 - Charmander knocks out Pikachu and wins the battle (295814b7)!
+2025-09-05 19:19:10.585 | INFO     | __main__:main:208 - Snorlax uses Shadow Ball that does 15 damage to Gengar. Gengar has 105 HP left!
+2025-09-05 19:19:11.587 | INFO     | __main__:main:208 - Snorlax uses Shadow Ball that does 15 damage to Gengar. Gengar has 90 HP left!
+2025-09-05 19:19:12.590 | INFO     | __main__:main:208 - Snorlax uses Thunderbolt that does 12 damage to Gengar. Gengar has 78 HP left!
+2025-09-05 19:19:13.591 | INFO     | __main__:main:208 - Snorlax uses Flamethrower that does 40 damage to Gengar. Gengar has 38 HP left!
+2025-09-05 19:19:14.594 | INFO     | __main__:main:208 - Snorlax uses Hyper Beam that does 15 damage to Gengar. Gengar has 23 HP left!
+2025-09-05 19:19:15.595 | INFO     | __main__:main:208 - Snorlax uses Water Gun that does 20 damage to Gengar. Gengar has 3 HP left!
+2025-09-05 19:19:16.597 | INFO     | __main__:main:208 - Snorlax uses Hyper Beam that does 15 damage to Gengar. Gengar has 0 HP left!
+2025-09-05 19:19:16.597 | INFO     | __main__:main:265 - [METRICS last 60s][KOs] total=7
+2025-09-05 19:19:17.599 | INFO     | __main__:main:230 - Snorlax knocks out Gengar and wins the battle (a6601006)!
+2025-09-05 19:19:17.600 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 12 damage to Gengar. Gengar has 108 HP left!
+2025-09-05 19:19:18.603 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 15 damage to Gengar. Gengar has 93 HP left!
+2025-09-05 19:19:19.604 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 12 damage to Gengar. Gengar has 81 HP left!
+2025-09-05 19:19:20.607 | INFO     | __main__:main:208 - Pikachu uses Shadow Ball that does 15 damage to Gengar. Gengar has 66 HP left!
+2025-09-05 19:19:21.609 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 15 damage to Gengar. Gengar has 51 HP left!
+2025-09-05 19:19:22.611 | INFO     | __main__:main:208 - Pikachu uses Thunderbolt that does 12 damage to Gengar. Gengar has 39 HP left!
+2025-09-05 19:19:23.614 | INFO     | __main__:main:208 - Pikachu uses Psychic that does 17 damage to Gengar. Gengar has 22 HP left!
+2025-09-05 19:19:24.615 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 12 damage to Gengar. Gengar has 10 HP left!
+2025-09-05 19:19:25.618 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 12 damage to Gengar. Gengar has 0 HP left!
+2025-09-05 19:19:26.620 | INFO     | __main__:main:230 - Pikachu knocks out Gengar and wins the battle (dd5569a4)!
+2025-09-05 19:19:26.621 | INFO     | __main__:main:208 - Charmander uses Psychic that does 24 damage to Mewtwo. Mewtwo has 142 HP left!
+2025-09-05 19:19:27.623 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 21 damage to Mewtwo. Mewtwo has 121 HP left!
+2025-09-05 19:19:28.626 | INFO     | __main__:main:208 - Charmander uses Psychic that does 24 damage to Mewtwo. Mewtwo has 97 HP left!
+2025-09-05 19:19:29.628 | INFO     | __main__:main:208 - Charmander uses Flamethrower that does 55 damage to Mewtwo. Mewtwo has 42 HP left!
+2025-09-05 19:19:30.630 | INFO     | __main__:main:208 - Charmander uses Mimic that does 0 damage to Mewtwo. Mewtwo has 42 HP left!
+2025-09-05 19:19:31.631 | INFO     | __main__:main:208 - Charmander uses Mimic that does 0 damage to Mewtwo. Mewtwo has 42 HP left!
+2025-09-05 19:19:31.632 | INFO     | __main__:main:269 - [METRICS last 60s][Most Damage Given] Pikachu with 356
+2025-09-05 19:19:32.634 | INFO     | __main__:main:208 - Charmander uses Shadow Ball that does 21 damage to Mewtwo. Mewtwo has 21 HP left!
+2025-09-05 19:19:33.636 | INFO     | __main__:main:208 - Charmander uses Mimic that does 0 damage to Mewtwo. Mewtwo has 21 HP left!
+2025-09-05 19:19:34.638 | INFO     | __main__:main:208 - Charmander uses Body Slam that does 42 damage to Mewtwo. Mewtwo has 0 HP left!
+2025-09-05 19:19:35.640 | INFO     | __main__:main:230 - Charmander knocks out Mewtwo and wins the battle (f3e2d87b)!
+2025-09-05 19:19:35.641 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Gengar. Gengar has 120 HP left!
+2025-09-05 19:19:36.642 | INFO     | __main__:main:208 - Pikachu uses Thunderbolt that does 12 damage to Gengar. Gengar has 108 HP left!
+2025-09-05 19:19:37.646 | INFO     | __main__:main:208 - Pikachu uses Psychic that does 17 damage to Gengar. Gengar has 91 HP left!
+2025-09-05 19:19:38.648 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Gengar. Gengar has 91 HP left!
+2025-09-05 19:19:39.650 | INFO     | __main__:main:208 - Pikachu uses Thunderbolt that does 12 damage to Gengar. Gengar has 79 HP left!
+2025-09-05 19:19:40.651 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Gengar. Gengar has 79 HP left!
+2025-09-05 19:19:41.654 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 12 damage to Gengar. Gengar has 67 HP left!
+2025-09-05 19:19:42.656 | INFO     | __main__:main:208 - Pikachu uses Shadow Ball that does 15 damage to Gengar. Gengar has 52 HP left!
+2025-09-05 19:19:43.658 | INFO     | __main__:main:208 - Pikachu uses Thunderbolt that does 12 damage to Gengar. Gengar has 40 HP left!
+2025-09-05 19:19:44.660 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 15 damage to Gengar. Gengar has 25 HP left!
+2025-09-05 19:19:45.662 | INFO     | __main__:main:208 - Pikachu uses Shadow Ball that does 15 damage to Gengar. Gengar has 10 HP left!
+2025-09-05 19:19:46.665 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 15 damage to Gengar. Gengar has 0 HP left!
+2025-09-05 19:19:46.665 | INFO     | __main__:main:275 - [METRICS last 60s][Most Damage Received] Gengar with 526
+2025-09-05 19:19:47.666 | INFO     | __main__:main:230 - Pikachu knocks out Gengar and wins the battle (8b28c430)!
+2025-09-05 19:19:47.669 | INFO     | __main__:main:208 - Gengar uses Hyper Beam that does 12 damage to Charmander. Charmander has 87 HP left!
+2025-09-05 19:19:48.670 | INFO     | __main__:main:208 - Gengar uses Body Slam that does 25 damage to Charmander. Charmander has 62 HP left!
+2025-09-05 19:19:49.672 | INFO     | __main__:main:208 - Gengar uses Body Slam that does 25 damage to Charmander. Charmander has 37 HP left!
+2025-09-05 19:19:50.675 | INFO     | __main__:main:208 - Gengar uses Thunderbolt that does 10 damage to Charmander. Charmander has 27 HP left!
+2025-09-05 19:19:51.677 | INFO     | __main__:main:208 - Gengar uses Body Slam that does 25 damage to Charmander. Charmander has 2 HP left!
+2025-09-05 19:19:52.679 | INFO     | __main__:main:208 - Gengar uses Hyper Beam that does 12 damage to Charmander. Charmander has 0 HP left!
+2025-09-05 19:19:53.681 | INFO     | __main__:main:230 - Gengar knocks out Charmander and wins the battle (a8a3b7eb)!
+2025-09-05 19:19:53.682 | INFO     | __main__:main:208 - Charmander uses Flamethrower that does 21 damage to Pikachu. Pikachu has 74 HP left!
+2025-09-05 19:19:54.685 | INFO     | __main__:main:208 - Charmander uses Body Slam that does 24 damage to Pikachu. Pikachu has 50 HP left!
+2025-09-05 19:19:55.685 | INFO     | __main__:main:208 - Charmander uses Flamethrower that does 21 damage to Pikachu. Pikachu has 29 HP left!
+2025-09-05 19:19:56.688 | INFO     | __main__:main:208 - Charmander uses Psychic that does 14 damage to Pikachu. Pikachu has 15 HP left!
+2025-09-05 19:19:57.690 | INFO     | __main__:main:208 - Charmander uses Flamethrower that does 21 damage to Pikachu. Pikachu has 0 HP left!
+2025-09-05 19:19:58.692 | INFO     | __main__:main:230 - Charmander knocks out Pikachu and wins the battle (8c4dcaac)!
+2025-09-05 19:19:58.694 | INFO     | __main__:main:208 - Pikachu uses Shadow Ball that does 15 damage to Gengar. Gengar has 105 HP left!
+2025-09-05 19:19:59.695 | INFO     | __main__:main:208 - Pikachu uses Shadow Ball that does 15 damage to Gengar. Gengar has 90 HP left!
+2025-09-05 19:20:00.698 | INFO     | __main__:main:208 - Pikachu uses Thunderbolt that does 12 damage to Gengar. Gengar has 78 HP left!
+2025-09-05 19:20:01.700 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 12 damage to Gengar. Gengar has 66 HP left!
+2025-09-05 19:20:01.701 | INFO     | __main__:main:281 - [METRICS last 60s][Avg Damage] 15.62 | [Legality] 100.0% legal
+2025-09-05 19:20:02.702 | INFO     | __main__:main:208 - Pikachu uses Quick Attack that does 12 damage to Gengar. Gengar has 54 HP left!
+2025-09-05 19:20:03.706 | INFO     | __main__:main:208 - Pikachu uses Mimic that does 0 damage to Gengar. Gengar has 54 HP left!
+2025-09-05 19:20:04.707 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 15 damage to Gengar. Gengar has 39 HP left!
+2025-09-05 19:20:05.709 | INFO     | __main__:main:208 - Pikachu uses Shadow Ball that does 15 damage to Gengar. Gengar has 24 HP left!
+2025-09-05 19:20:06.711 | INFO     | __main__:main:208 - Pikachu uses Hyper Beam that does 15 damage to Gengar. Gengar has 9 HP left!
+2025-09-05 19:20:07.713 | INFO     | __main__:main:208 - Pikachu uses Body Slam that does 30 damage to Gengar. Gengar has 0 HP left!
+2025-09-05 19:20:08.715 | INFO     | __main__:main:230 - Pikachu knocks out Gengar and wins the battle (c0bdb667)!
+2025-09-05 19:20:08.717 | INFO     | __main__:main:208 - Jigglypuff uses Shadow Ball that does 14 damage to Eevee. Eevee has 101 HP left!
+2025-09-05 19:20:09.718 | INFO     | __main__:main:208 - Jigglypuff uses Shadow Ball that does 14 damage to Eevee. Eevee has 87 HP left!
+2025-09-05 19:20:10.721 | INFO     | __main__:main:208 - Jigglypuff uses Body Slam that does 29 damage to Eevee. Eevee has 58 HP left!
+2025-09-05 19:20:11.723 | INFO     | __main__:main:208 - Jigglypuff uses Sing that does 0 damage to Eevee. Eevee has 58 HP left!
+2025-09-05 19:20:12.725 | INFO     | __main__:main:208 - Jigglypuff uses Body Slam that does 29 damage to Eevee. Eevee has 29 HP left!
+2025-09-05 19:20:13.726 | INFO     | __main__:main:208 - Jigglypuff uses Hyper Beam that does 14 damage to Eevee. Eevee has 15 HP left!
+2025-09-05 19:20:14.729 | INFO     | __main__:main:208 - Jigglypuff uses Flamethrower that does 39 damage to Eevee. Eevee has 0 HP left!
+2025-09-05 19:20:15.731 | INFO     | __main__:main:230 - Jigglypuff knocks out Eevee and wins the battle (8587db2d)!
+2025-09-05 19:20:15.732 | INFO     | __main__:main:208 - Charmander uses Mimic that does 0 damage to Gengar. Gengar has 120 HP left!
+2025-09-05 19:20:16.734 | INFO     | __main__:main:208 - Charmander uses Psychic that does 17 damage to Gengar. Gengar has 103 HP left!
+2025-09-05 19:20:16.734 | INFO     | __main__:main:265 - [METRICS last 60s][KOs] total=8
+2025-09-05 19:20:17.737 | INFO     | __main__:main:208 - Charmander uses Body Slam that does 30 damage to Gengar. Gengar has 73 HP left!
+2025-09-05 19:20:18.738 | INFO     | __main__:main:208 - Charmander uses Body Slam that does 30 damage to Gengar. Gengar has 43 HP left!
+2025-09-05 19:20:19.741 | INFO     | __main__:main:208 - Charmander uses Flamethrower that does 40 damage to Gengar. Gengar has 3 HP left!
+2025-09-05 19:20:20.743 | INFO     | __main__:main:208 - Charmander uses Mimic that does 0 damage to Gengar. Gengar has 3 HP left!
+2025-09-05 19:20:21.744 | INFO     | __main__:main:208 - Charmander uses Psychic that does 17 damage to Gengar. Gengar has 0 HP left!
+2025-09-05 19:20:22.746 | INFO     | __main__:main:230 - Charmander knocks out Gengar and wins the battle (3845c2e2)!
+2025-09-05 19:20:22.747 | INFO     | __main__:main:208 - Gengar uses Thunderbolt that does 18 damage to Jigglypuff. Jigglypuff has 160 HP left!
+2025-09-05 19:20:23.750 | INFO     | __main__:main:208 - Gengar uses Thunderbolt that does 18 damage to Jigglypuff. Jigglypuff has 142 HP left!
+2025-09-05 19:20:24.752 | INFO     | __main__:main:208 - Gengar uses Shadow Ball that does 22 damage to Jigglypuff. Jigglypuff has 120 HP left!
+2025-09-05 19:20:25.755 | INFO     | __main__:main:208 - Gengar uses Thunderbolt that does 18 damage to Jigglypuff. Jigglypuff has 102 HP left!
+2025-09-05 19:20:26.756 | INFO     | __main__:main:208 - Gengar uses Mimic that does 0 damage to Jigglypuff. Jigglypuff has 102 HP left!
+2025-09-05 19:20:27.758 | INFO     | __main__:main:208 - Gengar uses Psychic that does 25 damage to Jigglypuff. Jigglypuff has 77 HP left!
+2025-09-05 19:20:28.761 | INFO     | __main__:main:208 - Gengar uses Shadow Ball that does 22 damage to Jigglypuff. Jigglypuff has 55 HP left!
+2025-09-05 19:20:29.763 | INFO     | __main__:main:208 - Gengar uses Shadow Ball that does 22 damage to Jigglypuff. Jigglypuff has 33 HP left!
+2025-09-05 19:20:30.766 | INFO     | __main__:main:208 - Gengar uses Thunderbolt that does 18 damage to Jigglypuff. Jigglypuff has 15 HP left!
+2025-09-05 19:20:31.768 | INFO     | __main__:main:208 - Gengar uses Hyper Beam that does 22 damage to Jigglypuff. Jigglypuff has 0 HP left!
+2025-09-05 19:20:31.768 | INFO     | __main__:main:269 - [METRICS last 60s][Most Damage Given] Charmander with 298
+2025-09-05 19:20:32.769 | INFO     | __main__:main:230 - Gengar knocks out Jigglypuff and wins the battle (88b3141d)!
+2025-09-05 19:20:32.771 | INFO     | __main__:main:208 - Eevee uses Psychic that does 24 damage to Mewtwo. Mewtwo has 142 HP left!
+2025-09-05 19:20:33.773 | INFO     | __main__:main:208 - Eevee uses Mimic that does 0 damage to Mewtwo. Mewtwo has 142 HP left!
+2025-09-05 19:20:34.774 | INFO     | __main__:main:208 - Eevee uses Shadow Ball that does 21 damage to Mewtwo. Mewtwo has 121 HP left!
+2025-09-05 19:20:35.777 | INFO     | __main__:main:208 - Eevee uses Body Slam that does 42 damage to Mewtwo. Mewtwo has 79 HP left!
+2025-09-05 19:20:36.779 | INFO     | __main__:main:208 - Eevee uses Psychic that does 24 damage to Mewtwo. Mewtwo has 55 HP left!
+2025-09-05 19:20:37.780 | INFO     | __main__:main:208 - Eevee uses Mimic that does 0 damage to Mewtwo. Mewtwo has 55 HP left!
+2025-09-05 19:20:38.783 | INFO     | __main__:main:208 - Eevee uses Water Gun that does 28 damage to Mewtwo. Mewtwo has 27 HP left!
+2025-09-05 19:20:39.785 | INFO     | __main__:main:208 - Eevee uses Body Slam that does 42 damage to Mewtwo. Mewtwo has 0 HP left!
+2025-09-05 19:20:40.786 | INFO     | __main__:main:230 - Eevee knocks out Mewtwo and wins the battle (bba65edf)!
+2025-09-05 19:20:40.787 | INFO     | __main__:main:208 - Eevee uses Flamethrower that does 40 damage to Gengar. Gengar has 80 HP left!
+2025-09-05 19:20:41.791 | INFO     | __main__:main:208 - Eevee uses Mimic that does 0 damage to Gengar. Gengar has 80 HP left!
+2025-09-05 19:20:42.793 | INFO     | __main__:main:208 - Eevee uses Water Gun that does 20 damage to Gengar. Gengar has 60 HP left!
+2025-09-05 19:20:43.795 | INFO     | __main__:main:208 - Eevee uses Water Gun that does 20 damage to Gengar. Gengar has 40 HP left!
+2025-09-05 19:20:44.797 | INFO     | __main__:main:208 - Eevee uses Hyper Beam that does 15 damage to Gengar. Gengar has 25 HP left!
+2025-09-05 19:20:45.799 | INFO     | __main__:main:208 - Eevee uses Hyper Beam that does 15 damage to Gengar. Gengar has 10 HP left!
+2025-09-05 19:20:46.801 | INFO     | __main__:main:275 - [METRICS last 60s][Most Damage Received] Gengar with 385
+2025-09-05 19:20:46.801 | INFO     | __main__:main:208 - Eevee uses Psychic that does 17 damage to Gengar. Gengar has 0 HP left!
+2025-09-05 19:20:47.803 | INFO     | __main__:main:230 - Eevee knocks out Gengar and wins the battle (d68fc9c2)!
+2025-09-05 19:20:47.805 | INFO     | __main__:main:208 - Squirtle uses Body Slam that does 24 damage to Pikachu. Pikachu has 71 HP left!
+2025-09-05 19:20:48.806 | INFO     | __main__:main:208 - Squirtle uses Shadow Ball that does 12 damage to Pikachu. Pikachu has 59 HP left!
+2025-09-05 19:20:49.809 | INFO     | __main__:main:208 - Squirtle uses Shadow Ball that does 12 damage to Pikachu. Pikachu has 47 HP left!
+2025-09-05 19:20:50.811 | WARNING  | __main__:main:287 - Consumer interrupted by user.
+2025-09-05 19:20:50.814 | INFO     | __main__:main:295 - END kafka_consumer_pokemon
