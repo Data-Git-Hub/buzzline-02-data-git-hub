@@ -107,6 +107,16 @@ python3 -m consumers.kafka_consumer_case
 
 # Task 5 P.2 Pokémon Battle Simulator
 
+Stream structured Pokémon battle events through Apache Kafka.
+A Python producer emits JSON battle events; a Python consumer validates moves, tracks HP/KO, and prints rolling analytics.
+
+hat You’ll Build
+
+Producer (Python): randomly picks a trainer & opponent, selects a legal move (from pokemon_attack.csv), looks up damage (from pokemon_damage.csv), and emits:
+
+```shell
+{ "battle_id": "...", "turn": 1, "trainer": "Snorlax", "opponent": "Charmander", "move": "Shadow Ball", "damage": 12, "ts": "2025-09-05T23:36:17.549414Z" }
+```
 *** Important instructions on setting up this project ***
 
 
