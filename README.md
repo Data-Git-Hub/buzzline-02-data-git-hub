@@ -279,7 +279,6 @@ python3 -m pip install --upgrade -r requirements.txt
 ---
 
 Task 3. Configure Environment Variables
-
 You can set these per session in PowerShell, or place them in a `.env` file at the project root.
 
 PowerShell (recommended for clarity)
@@ -298,15 +297,128 @@ KAFKA_API_VERSION=3.5.0
 MESSAGE_INTERVAL_SECONDS=1
 LOG_ROLE=app
 ```
-If 127.0.0.1:9092 doesn’t work from Windows:
-Find your WSL IP:
+
+---
+
+Task 4. Start the Kafka Consumer (start this first)
+Open a new PowerShell tab in your project root.
+
 ```shell
-wsl.exe hostname -I
+cd C:\Projects\buzzline-02-data-git-hub
+. .\.venv\Scripts\Activate.ps1
+
+# (if you did not set envs in this terminal)
+$env:KAFKA_BROKER_ADDRESS="127.0.0.1:9092"   # or "$ip:9092"
+$env:KAFKA_TOPIC="pokemon_battles"
+$env:KAFKA_API_VERSION="3.5.0"
+$env:LOG_ROLE="consumer"
+
+py -m consumers.kafka_consumer_pokemon
 ```
-Take the first IP (e.g., `172.23.170.127`) and set:
+
+You should see something like:
 ```shell
-$env:KAFKA_B
+[CONSUMER] Kafka topic: pokemon_battles
+[CONSUMER] Group ID: pokemon_group
+[CONSUMER] Polling topic 'pokemon_battles'...
 ```
+
+---
+
+Task 5. Start the Kafka Producer
+Open another PowerShell tab in your project root.
+
+```shell
+cd C:\Projects\buzzline-02-data-git-hub
+. .\.venv\Scripts\Activate.ps1
+
+# (if you did not set envs in this terminal)
+$env:KAFKA_BROKER_ADDRESS="127.0.0.1:9092"   # or "$ip:9092"
+$env:KAFKA_TOPIC="pokemon_battles"
+$env:KAFKA_API_VERSION="3.5.0"
+$env:MESSAGE_INTERVAL_SECONDS="1"
+$env:LOG_ROLE="producer"
+
+py -m producers.kafka_producer_pokemon
+```
+
+---
+
+What You Should See
+Immediate per-event logs (from the consumer)
+```shell
+Snorlax uses Shadow Ball that does 12 damage to Charmander. Charmander has 88 HP left!
+Bulbasaur uses Vine Whip that does 18 damage to Squirtle. Squirtle has 0 HP left!
+Bulbasaur knocks out Squirtle and wins the battle (f97f5ba8)!
+```
+
+Alerts if something ever goes wrong (should be rare)
+```shell
+[ALERT][ILLEGAL MOVE] Trainer=Pikachu used move='Water Gun' (not legal). Event={...}
+```
+
+Rolling analytics (every 15s, for the last 60s)
+```shell
+[METRICS last 60s][KOs] total=3
+[METRICS last 60s][Most Damage Given] Gengar with 124
+[METRICS last 60s][Most Damage Received] Bulbasaur with 98
+[METRICS last 60s][Avg Damage] 13.42 | [Legality] 100.0% legal
+```
+
+---
+
+Troubleshooting
+Kafka in WSL shows only 9093 listening
+
+Edit WSL file `~/kafka/config/kraft/server.properties`:
+```shell
+Troubleshooting
+Kafka in WSL shows only 9093 listening
+
+Edit WSL file ~/kafka/config/kraft/server.properties:
+```
+
+Restart Kafka:
+```shell
+# WSL
+cd ~/kafka
+# If already running, stop it (Ctrl+C in that terminal)
+bin/kafka-server-start.sh config/kraft/server.properties
+```
+
+Verify:
+```shell
+ss -ltnp | egrep ':9092|:9093'
+```
+
+Windows can’t reach WSL Kafka on 127.0.0.1
+Use the WSL IP from Windows:
+```shell
+$ip = (wsl.exe hostname -I).Split()[0]
+Test-NetConnection -ComputerName $ip -Port 9092
+$env:KAFKA_BROKER_ADDRESS="$ip:9092"
+```
+
+`UnrecognizedBrokerVersion` or `metadata timeout`
+Pin the client:
+
+```shell
+$env:KAFKA_API_VERSION="3.5.0"
+```
+
+Create topic from WSL:
+```shell
+bin/kafka-topics.sh --bootstrap-server 127.0.0.1:9092 --create --topic pokemon_battles --partitions 1 --replication-factor 1
+```
+
+Log rotation `PermissionError` on Windows
+
+If you see retention/rotation errors in `logs/`:
+- Close editors/tailers that might lock files.
+- Re-run PowerShell as Administrator if necessary.
+- Temporarily disable retention in your logger or manually delete old `logs\*.log` while apps are closed.
+
+---
 
 
 ### Later Work Sessions
