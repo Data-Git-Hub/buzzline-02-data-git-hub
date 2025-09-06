@@ -1,115 +1,93 @@
-"""
-Logger Setup Script
-File: utils/utils_logger.py
+# utils/utils_logger.py
+from __future__ import annotations
 
-This script provides logging functions for the project. 
-Logging is an essential way to track events and issues during execution. 
-
-Features:
-- Logs information, warnings, and errors to a designated log file.
-- Ensures the log directory exists.
-- Sanitizes logs to remove personal/identifying information for GitHub sharing.
-"""
-
-# Imports from Python Standard Library
-import pathlib
 import os
-import getpass
+import re
+import sys
+from pathlib import Path
+from typing import Iterable
 
-# Imports from external packages
 from loguru import logger
 
-# Get this file name without the extension
-CURRENT_SCRIPT = pathlib.Path(__file__).stem
+# ----------------------------
+# Paths / folders
+# ----------------------------
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+LOG_DIR = PROJECT_ROOT / "logs"
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+print(f"Log folder created at: {LOG_DIR}")  # early print in case logging not ready
 
-# Set directory where logs will be stored
-LOG_FOLDER: pathlib.Path = pathlib.Path("logs")
+# ----------------------------
+# Role-based file naming
+# ----------------------------
+def _detect_role() -> str:
+    role = os.getenv("LOG_ROLE")
+    if role:
+        return re.sub(r"[^A-Za-z0-9_.-]+", "-", role)[:32]
 
-# Set the name of the log file
-LOG_FILE: pathlib.Path = LOG_FOLDER.joinpath("project_log.log")
+    # fallback heuristic from argv
+    argv = " ".join(sys.argv).lower()
+    if "consumer" in argv:
+        return "consumer"
+    if "producer" in argv:
+        return "producer"
+    return "app"
 
-# Sanitization function to remove identifying info
-def sanitize_message(record):
-    """Remove personal/identifying information from log messages."""
-    message = record["message"]
-    
-    # Replace username with generic placeholder
-    current_user = getpass.getuser()
-    message = message.replace(current_user, "USER")
-    
-    # Replace home directory paths
-    home_path = str(pathlib.Path.home())
-    message = message.replace(home_path, "~")
-    
-    # Replace absolute paths with relative ones
-    cwd = str(pathlib.Path.cwd())
-    message = message.replace(cwd, "PROJECT_ROOT")
-    
-    # Replace Windows paths with forward slashes for consistency
-    message = message.replace("\\", "/")
-    
-    # Update the record
-    record["message"] = message
-    return message
+ROLE = _detect_role()
+LOG_BASENAME = os.getenv("LOG_BASENAME", "project_log")
+LOG_FILE = LOG_DIR / f"{LOG_BASENAME}-{ROLE}.log"
 
-# Custom format that uses sanitized messages
-def format_sanitized(record):
-    """Custom formatter that sanitizes messages."""
-    sanitize_message(record)
-    return "{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}\n"
+# ----------------------------
+# Rotation / retention
+# ----------------------------
+ROTATION = os.getenv("LOG_ROTATION", "10 MB")     # size or time (e.g. "1 week")
+# Keep last N rotated files per role; ignore permission errors (Windows locks)
+def _make_safe_retention(keep: int):
+    def _retention(files: Iterable[str]) -> None:
+        files = sorted(files)
+        to_delete = files[:-keep] if keep > 0 else []
+        for f in to_delete:
+            try:
+                os.remove(f)
+            except PermissionError:
+                # another process or AV may briefly lock; skip silently
+                pass
+            except Exception:
+                pass
+    return _retention
 
-# Ensure the log folder exists or create it
-try:
-    LOG_FOLDER.mkdir(exist_ok=True)
-    logger.info(f"Log folder created at: {LOG_FOLDER}")
-except Exception as e:
-    logger.error(f"Error creating log folder: {e}")
+KEEP = int(os.getenv("LOG_KEEP", "10"))
+RETENTION = _make_safe_retention(KEEP)
 
-# Configure Loguru to write to the log file with sanitization
-try:
-    logger.add(
-        LOG_FILE, 
-        level="INFO",
-        rotation="50 kB",      # Small files
-        retention=0,           # Keep only current log
-        compression=None,      # No compression needed
-        format=format_sanitized,  # Use sanitized format
-        filter=lambda record: sanitize_message(record) or True  # Sanitize before writing
-    )
-    logger.info(f"Logging to file: {LOG_FILE}")
-    logger.info("Log sanitization enabled, personal info will be removed")
-except Exception as e:
-    logger.error(f"Error configuring logger to write to file: {e}")
+# ----------------------------
+# Configure Loguru
+# ----------------------------
+logger.remove()
 
+# Console
+logger.add(
+    sys.stdout,
+    level=os.getenv("LOG_LEVEL", "INFO"),
+    backtrace=False,
+    diagnose=False,
+    colorize=True,
+    format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <7}</level> | "
+           "<cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>",
+)
 
-def get_log_file_path() -> pathlib.Path:
-    """Return the path to the log file."""
-    return LOG_FILE
+# File (per-role)
+logger.add(
+    LOG_FILE,
+    level=os.getenv("LOG_LEVEL", "INFO"),
+    rotation=ROTATION,
+    retention=RETENTION,
+    enqueue=True,           # multiprocess-friendly
+    backtrace=False,
+    diagnose=False,
+    encoding="utf-8",
+)
 
+logger.info(f"Logging to file: {LOG_FILE}")
+logger.info("Log sanitization enabled, personal info will be removed")
 
-def log_example() -> None:
-    """Example logging function to demonstrate logging behavior."""
-    try:
-        logger.info("This is an example info message.")
-        logger.info(f"Current working directory: {pathlib.Path.cwd()}")
-        logger.info(f"User home directory: {pathlib.Path.home()}")
-        logger.warning("This is an example warning message.")
-        logger.error("This is an example error message.")
-    except Exception as e:
-        logger.error(f"An error occurred during logging: {e}")
-
-
-def main() -> None:
-    """Main function to execute logger setup and demonstrate its usage."""
-    logger.info(f"STARTING {CURRENT_SCRIPT}.py")
-
-    # Call the example logging function
-    log_example()
-
-    logger.info(f"View the log output at {LOG_FILE}")
-    logger.info(f"EXITING {CURRENT_SCRIPT}.py.")
-
-
-# Conditional execution block that calls main() only when this file is executed directly
-if __name__ == "__main__":
-    main()
+__all__ = ["logger"]

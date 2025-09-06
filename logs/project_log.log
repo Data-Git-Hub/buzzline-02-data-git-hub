@@ -1,49 +1,74 @@
-2025-09-05 18:51:17 | INFO | Jigglypuff uses Sing that does 0 damage to Bulbasaur. Bulbasaur has 87 HP left!
-2025-09-05 18:51:18 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '134d3336-4a7d-4a87-b7e2-fc4a5b4e3c2d', 'turn': 3, 'trainer': 'Jigglypuff', 'opponent': 'Bulbasaur', 'move': 'Body Slam', 'damage': 27, 'hp_before': 87, 'hp_after': 60, 'ts': '2025-09-05T23:51:18.885854Z'}
-2025-09-05 18:51:18 | INFO | Jigglypuff uses Body Slam that does 27 damage to Bulbasaur. Bulbasaur has 60 HP left!
-2025-09-05 18:51:19 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '134d3336-4a7d-4a87-b7e2-fc4a5b4e3c2d', 'turn': 4, 'trainer': 'Jigglypuff', 'opponent': 'Bulbasaur', 'move': 'Hyper Beam', 'damage': 13, 'hp_before': 60, 'hp_after': 47, 'ts': '2025-09-05T23:51:19.888580Z'}
-2025-09-05 18:51:19 | INFO | Jigglypuff uses Hyper Beam that does 13 damage to Bulbasaur. Bulbasaur has 47 HP left!
-2025-09-05 18:51:20 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '134d3336-4a7d-4a87-b7e2-fc4a5b4e3c2d', 'turn': 5, 'trainer': 'Jigglypuff', 'opponent': 'Bulbasaur', 'move': 'Water Gun', 'damage': 18, 'hp_before': 47, 'hp_after': 29, 'ts': '2025-09-05T23:51:20.892264Z'}
-2025-09-05 18:51:20 | INFO | Jigglypuff uses Water Gun that does 18 damage to Bulbasaur. Bulbasaur has 29 HP left!
-2025-09-05 18:51:21 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '134d3336-4a7d-4a87-b7e2-fc4a5b4e3c2d', 'turn': 6, 'trainer': 'Jigglypuff', 'opponent': 'Bulbasaur', 'move': 'Shadow Ball', 'damage': 13, 'hp_before': 29, 'hp_after': 16, 'ts': '2025-09-05T23:51:21.894840Z'}
-2025-09-05 18:51:21 | INFO | Jigglypuff uses Shadow Ball that does 13 damage to Bulbasaur. Bulbasaur has 16 HP left!
-2025-09-05 18:51:22 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '134d3336-4a7d-4a87-b7e2-fc4a5b4e3c2d', 'turn': 7, 'trainer': 'Jigglypuff', 'opponent': 'Bulbasaur', 'move': 'Flamethrower', 'damage': 35, 'hp_before': 16, 'hp_after': 0, 'ts': '2025-09-05T23:51:22.897125Z'}
-2025-09-05 18:51:22 | INFO | Jigglypuff uses Flamethrower that does 35 damage to Bulbasaur. Bulbasaur has 0 HP left!
-2025-09-05 18:51:23 | INFO | [WIN] {'event_type': 'win', 'battle_id': '134d3336-4a7d-4a87-b7e2-fc4a5b4e3c2d', 'turn': 7, 'trainer': 'Jigglypuff', 'opponent': 'Bulbasaur', 'ts': '2025-09-05T23:51:23.899689Z'}
-2025-09-05 18:51:23 | INFO | [BATTLE] 68a413c4: Snorlax vs Mewtwo (opponent HP = 166)
-2025-09-05 18:51:23 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 1, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Hyper Beam', 'damage': 21, 'hp_before': 166, 'hp_after': 145, 'ts': '2025-09-05T23:51:23.901694Z'}
-2025-09-05 18:51:23 | INFO | Jigglypuff knocks out Bulbasaur and wins the battle (134d3336)!
-2025-09-05 18:51:23 | INFO | Snorlax uses Hyper Beam that does 21 damage to Mewtwo. Mewtwo has 145 HP left!
-2025-09-05 18:51:24 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 2, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Psychic', 'damage': 24, 'hp_before': 145, 'hp_after': 121, 'ts': '2025-09-05T23:51:24.903838Z'}
-2025-09-05 18:51:24 | INFO | Snorlax uses Psychic that does 24 damage to Mewtwo. Mewtwo has 121 HP left!
-2025-09-05 18:51:25 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 3, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Water Gun', 'damage': 28, 'hp_before': 121, 'hp_after': 93, 'ts': '2025-09-05T23:51:25.906129Z'}
-2025-09-05 18:51:25 | INFO | Snorlax uses Water Gun that does 28 damage to Mewtwo. Mewtwo has 93 HP left!
-2025-09-05 18:51:26 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 4, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Hyper Beam', 'damage': 21, 'hp_before': 93, 'hp_after': 72, 'ts': '2025-09-05T23:51:26.908872Z'}
-2025-09-05 18:51:26 | INFO | Snorlax uses Hyper Beam that does 21 damage to Mewtwo. Mewtwo has 72 HP left!
-2025-09-05 18:51:27 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 5, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Water Gun', 'damage': 28, 'hp_before': 72, 'hp_after': 44, 'ts': '2025-09-05T23:51:27.911109Z'}
-2025-09-05 18:51:27 | INFO | Snorlax uses Water Gun that does 28 damage to Mewtwo. Mewtwo has 44 HP left!
-2025-09-05 18:51:28 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 6, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Shadow Ball', 'damage': 21, 'hp_before': 44, 'hp_after': 23, 'ts': '2025-09-05T23:51:28.913847Z'}
-2025-09-05 18:51:28 | INFO | Snorlax uses Shadow Ball that does 21 damage to Mewtwo. Mewtwo has 23 HP left!
-2025-09-05 18:51:29 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 7, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Mimic', 'damage': 0, 'hp_before': 23, 'hp_after': 23, 'ts': '2025-09-05T23:51:29.916156Z'}
-2025-09-05 18:51:29 | INFO | Snorlax uses Mimic that does 0 damage to Mewtwo. Mewtwo has 23 HP left!
-2025-09-05 18:51:30 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 8, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'move': 'Psychic', 'damage': 24, 'hp_before': 23, 'hp_after': 0, 'ts': '2025-09-05T23:51:30.918579Z'}
-2025-09-05 18:51:30 | INFO | Snorlax uses Psychic that does 24 damage to Mewtwo. Mewtwo has 0 HP left!
-2025-09-05 18:51:31 | INFO | [WIN] {'event_type': 'win', 'battle_id': '68a413c4-82fa-4eda-857c-028ecd2002f8', 'turn': 8, 'trainer': 'Snorlax', 'opponent': 'Mewtwo', 'ts': '2025-09-05T23:51:31.921230Z'}
-2025-09-05 18:51:31 | INFO | [BATTLE] ee609326: Squirtle vs Gengar (opponent HP = 120)
-2025-09-05 18:51:31 | INFO | Snorlax knocks out Mewtwo and wins the battle (68a413c4)!
-2025-09-05 18:51:31 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 1, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Psychic', 'damage': 17, 'hp_before': 120, 'hp_after': 103, 'ts': '2025-09-05T23:51:31.923234Z'}
-2025-09-05 18:51:31 | INFO | Squirtle uses Psychic that does 17 damage to Gengar. Gengar has 103 HP left!
-2025-09-05 18:51:32 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 2, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Psychic', 'damage': 17, 'hp_before': 103, 'hp_after': 86, 'ts': '2025-09-05T23:51:32.925577Z'}
-2025-09-05 18:51:32 | INFO | Squirtle uses Psychic that does 17 damage to Gengar. Gengar has 86 HP left!
-2025-09-05 18:51:33 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 3, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Body Slam', 'damage': 30, 'hp_before': 86, 'hp_after': 56, 'ts': '2025-09-05T23:51:33.927901Z'}
-2025-09-05 18:51:33 | INFO | Squirtle uses Body Slam that does 30 damage to Gengar. Gengar has 56 HP left!
-2025-09-05 18:51:34 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 4, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Water Gun', 'damage': 20, 'hp_before': 56, 'hp_after': 36, 'ts': '2025-09-05T23:51:34.930552Z'}
-2025-09-05 18:51:34 | WARNING | Consumer interrupted by user.
-2025-09-05 18:51:34 | INFO | END kafka_consumer_pokemon
-2025-09-05 18:51:35 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 5, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Body Slam', 'damage': 30, 'hp_before': 36, 'hp_after': 6, 'ts': '2025-09-05T23:51:35.932745Z'}
-2025-09-05 18:51:36 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 6, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'move': 'Body Slam', 'damage': 30, 'hp_before': 6, 'hp_after': 0, 'ts': '2025-09-05T23:51:36.935195Z'}
-2025-09-05 18:51:37 | INFO | [WIN] {'event_type': 'win', 'battle_id': 'ee609326-690e-464a-ac69-e6ce57bf0406', 'turn': 6, 'trainer': 'Squirtle', 'opponent': 'Gengar', 'ts': '2025-09-05T23:51:37.937702Z'}
-2025-09-05 18:51:37 | INFO | [BATTLE] 91e5affe: Bulbasaur vs Mewtwo (opponent HP = 166)
-2025-09-05 18:51:37 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '91e5affe-6b78-4aad-a54d-0806b04f6980', 'turn': 1, 'trainer': 'Bulbasaur', 'opponent': 'Mewtwo', 'move': 'Vine Whip', 'damage': 28, 'hp_before': 166, 'hp_after': 138, 'ts': '2025-09-05T23:51:37.939861Z'}
-2025-09-05 18:51:38 | WARNING | Producer interrupted by user.
-2025-09-05 18:51:38 | INFO | END kafka_producer_pokemon
+2025-09-05 19:07:55 | INFO | [WIN] {'event_type': 'win', 'battle_id': '592f9fe0-f987-4e9f-b558-bf1f016e2634', 'turn': 8, 'trainer': 'Gengar', 'opponent': 'Snorlax', 'ts': '2025-09-06T00:07:55.751529Z'}
+2025-09-05 19:07:55 | INFO | [BATTLE] 14584b00: Eevee vs Mewtwo (opponent HP = 166)
+2025-09-05 19:07:55 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '14584b00-823f-44d1-97ef-8479e7354444', 'turn': 1, 'trainer': 'Eevee', 'opponent': 'Mewtwo', 'move': 'Thunderbolt', 'damage': 17, 'hp_before': 166, 'hp_after': 149, 'ts': '2025-09-06T00:07:55.754977Z'}
+2025-09-05 19:07:55 | INFO | Gengar knocks out Snorlax and wins the battle (592f9fe0)!
+2025-09-05 19:07:55 | INFO | Eevee uses Thunderbolt that does 17 damage to Mewtwo. Mewtwo has 149 HP left!
+2025-09-05 19:07:56 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '14584b00-823f-44d1-97ef-8479e7354444', 'turn': 2, 'trainer': 'Eevee', 'opponent': 'Mewtwo', 'move': 'Thunderbolt', 'damage': 17, 'hp_before': 149, 'hp_after': 132, 'ts': '2025-09-06T00:07:56.756799Z'}
+2025-09-05 19:07:56 | INFO | Eevee uses Thunderbolt that does 17 damage to Mewtwo. Mewtwo has 132 HP left!
+2025-09-05 19:07:56 | INFO | [METRICS last 60s][Avg Damage] 19.42 | [Legality] 100.0% legal
+2025-09-05 19:07:57 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '14584b00-823f-44d1-97ef-8479e7354444', 'turn': 3, 'trainer': 'Eevee', 'opponent': 'Mewtwo', 'move': 'Thunderbolt', 'damage': 17, 'hp_before': 132, 'hp_after': 115, 'ts': '2025-09-06T00:07:57.758959Z'}
+2025-09-05 19:07:57 | INFO | Eevee uses Thunderbolt that does 17 damage to Mewtwo. Mewtwo has 115 HP left!
+2025-09-05 19:07:58 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '14584b00-823f-44d1-97ef-8479e7354444', 'turn': 4, 'trainer': 'Eevee', 'opponent': 'Mewtwo', 'move': 'Quick Attack', 'damage': 17, 'hp_before': 115, 'hp_after': 98, 'ts': '2025-09-06T00:07:58.761302Z'}
+2025-09-05 19:07:58 | INFO | Eevee uses Quick Attack that does 17 damage to Mewtwo. Mewtwo has 98 HP left!
+2025-09-05 19:07:59 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '14584b00-823f-44d1-97ef-8479e7354444', 'turn': 5, 'trainer': 'Eevee', 'opponent': 'Mewtwo', 'move': 'Thunderbolt', 'damage': 17, 'hp_before': 98, 'hp_after': 81, 'ts': '2025-09-06T00:07:59.763548Z'}
+2025-09-05 19:07:59 | INFO | Eevee uses Thunderbolt that does 17 damage to Mewtwo. Mewtwo has 81 HP left!
+2025-09-05 19:08:00 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '14584b00-823f-44d1-97ef-8479e7354444', 'turn': 6, 'trainer': 'Eevee', 'opponent': 'Mewtwo', 'move': 'Mimic', 'damage': 0, 'hp_before': 81, 'hp_after': 81, 'ts': '2025-09-06T00:08:00.765891Z'}
+2025-09-05 19:08:00 | INFO | Eevee uses Mimic that does 0 damage to Mewtwo. Mewtwo has 81 HP left!
+2025-09-05 19:08:01 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '14584b00-823f-44d1-97ef-8479e7354444', 'turn': 7, 'trainer': 'Eevee', 'opponent': 'Mewtwo', 'move': 'Flamethrower', 'damage': 55, 'hp_before': 81, 'hp_after': 26, 'ts': '2025-09-06T00:08:01.768016Z'}
+2025-09-05 19:08:01 | INFO | Eevee uses Flamethrower that does 55 damage to Mewtwo. Mewtwo has 26 HP left!
+2025-09-05 19:08:02 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '14584b00-823f-44d1-97ef-8479e7354444', 'turn': 8, 'trainer': 'Eevee', 'opponent': 'Mewtwo', 'move': 'Thunderbolt', 'damage': 17, 'hp_before': 26, 'hp_after': 9, 'ts': '2025-09-06T00:08:02.770182Z'}
+2025-09-05 19:08:02 | INFO | Eevee uses Thunderbolt that does 17 damage to Mewtwo. Mewtwo has 9 HP left!
+2025-09-05 19:08:03 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '14584b00-823f-44d1-97ef-8479e7354444', 'turn': 9, 'trainer': 'Eevee', 'opponent': 'Mewtwo', 'move': 'Water Gun', 'damage': 28, 'hp_before': 9, 'hp_after': 0, 'ts': '2025-09-06T00:08:03.772495Z'}
+2025-09-05 19:08:03 | INFO | Eevee uses Water Gun that does 28 damage to Mewtwo. Mewtwo has 0 HP left!
+2025-09-05 19:08:04 | INFO | [WIN] {'event_type': 'win', 'battle_id': '14584b00-823f-44d1-97ef-8479e7354444', 'turn': 9, 'trainer': 'Eevee', 'opponent': 'Mewtwo', 'ts': '2025-09-06T00:08:04.774749Z'}
+2025-09-05 19:08:04 | INFO | [BATTLE] e37bab5b: Gengar vs Charmander (opponent HP = 99)
+2025-09-05 19:08:04 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'e37bab5b-a0c0-4835-ae75-5e3c56bd03dc', 'turn': 1, 'trainer': 'Gengar', 'opponent': 'Charmander', 'move': 'Thunderbolt', 'damage': 10, 'hp_before': 99, 'hp_after': 89, 'ts': '2025-09-06T00:08:04.776754Z'}
+2025-09-05 19:08:04 | INFO | Eevee knocks out Mewtwo and wins the battle (14584b00)!
+2025-09-05 19:08:04 | INFO | Gengar uses Thunderbolt that does 10 damage to Charmander. Charmander has 89 HP left!
+2025-09-05 19:08:05 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'e37bab5b-a0c0-4835-ae75-5e3c56bd03dc', 'turn': 2, 'trainer': 'Gengar', 'opponent': 'Charmander', 'move': 'Shadow Ball', 'damage': 12, 'hp_before': 89, 'hp_after': 77, 'ts': '2025-09-06T00:08:05.777914Z'}
+2025-09-05 19:08:05 | INFO | Gengar uses Shadow Ball that does 12 damage to Charmander. Charmander has 77 HP left!
+2025-09-05 19:08:06 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'e37bab5b-a0c0-4835-ae75-5e3c56bd03dc', 'turn': 3, 'trainer': 'Gengar', 'opponent': 'Charmander', 'move': 'Shadow Ball', 'damage': 12, 'hp_before': 77, 'hp_after': 65, 'ts': '2025-09-06T00:08:06.780013Z'}
+2025-09-05 19:08:06 | INFO | Gengar uses Shadow Ball that does 12 damage to Charmander. Charmander has 65 HP left!
+2025-09-05 19:08:07 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'e37bab5b-a0c0-4835-ae75-5e3c56bd03dc', 'turn': 4, 'trainer': 'Gengar', 'opponent': 'Charmander', 'move': 'Mimic', 'damage': 0, 'hp_before': 65, 'hp_after': 65, 'ts': '2025-09-06T00:08:07.782318Z'}
+2025-09-05 19:08:07 | INFO | Gengar uses Mimic that does 0 damage to Charmander. Charmander has 65 HP left!
+2025-09-05 19:08:08 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'e37bab5b-a0c0-4835-ae75-5e3c56bd03dc', 'turn': 5, 'trainer': 'Gengar', 'opponent': 'Charmander', 'move': 'Body Slam', 'damage': 25, 'hp_before': 65, 'hp_after': 40, 'ts': '2025-09-06T00:08:08.784273Z'}
+2025-09-05 19:08:08 | INFO | Gengar uses Body Slam that does 25 damage to Charmander. Charmander has 40 HP left!
+2025-09-05 19:08:09 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'e37bab5b-a0c0-4835-ae75-5e3c56bd03dc', 'turn': 6, 'trainer': 'Gengar', 'opponent': 'Charmander', 'move': 'Psychic', 'damage': 14, 'hp_before': 40, 'hp_after': 26, 'ts': '2025-09-06T00:08:09.786757Z'}
+2025-09-05 19:08:09 | INFO | Gengar uses Psychic that does 14 damage to Charmander. Charmander has 26 HP left!
+2025-09-05 19:08:10 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'e37bab5b-a0c0-4835-ae75-5e3c56bd03dc', 'turn': 7, 'trainer': 'Gengar', 'opponent': 'Charmander', 'move': 'Shadow Ball', 'damage': 12, 'hp_before': 26, 'hp_after': 14, 'ts': '2025-09-06T00:08:10.788894Z'}
+2025-09-05 19:08:10 | INFO | Gengar uses Shadow Ball that does 12 damage to Charmander. Charmander has 14 HP left!
+2025-09-05 19:08:11 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'e37bab5b-a0c0-4835-ae75-5e3c56bd03dc', 'turn': 8, 'trainer': 'Gengar', 'opponent': 'Charmander', 'move': 'Psychic', 'damage': 14, 'hp_before': 14, 'hp_after': 0, 'ts': '2025-09-06T00:08:11.791276Z'}
+2025-09-05 19:08:11 | INFO | [METRICS last 60s][KOs] total=7
+2025-09-05 19:08:11 | INFO | Gengar uses Psychic that does 14 damage to Charmander. Charmander has 0 HP left!
+2025-09-05 19:08:12 | INFO | [WIN] {'event_type': 'win', 'battle_id': 'e37bab5b-a0c0-4835-ae75-5e3c56bd03dc', 'turn': 8, 'trainer': 'Gengar', 'opponent': 'Charmander', 'ts': '2025-09-06T00:08:12.793417Z'}
+2025-09-05 19:08:12 | INFO | [BATTLE] b040ba28: Snorlax vs Jigglypuff (opponent HP = 178)
+2025-09-05 19:08:12 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'b040ba28-a6f4-4a15-aebc-042eb8998ce0', 'turn': 1, 'trainer': 'Snorlax', 'opponent': 'Jigglypuff', 'move': 'Body Slam', 'damage': 45, 'hp_before': 178, 'hp_after': 133, 'ts': '2025-09-06T00:08:12.795421Z'}
+2025-09-05 19:08:12 | INFO | Gengar knocks out Charmander and wins the battle (e37bab5b)!
+2025-09-05 19:08:12 | INFO | Snorlax uses Body Slam that does 45 damage to Jigglypuff. Jigglypuff has 133 HP left!
+2025-09-05 19:08:13 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'b040ba28-a6f4-4a15-aebc-042eb8998ce0', 'turn': 2, 'trainer': 'Snorlax', 'opponent': 'Jigglypuff', 'move': 'Flamethrower', 'damage': 59, 'hp_before': 133, 'hp_after': 74, 'ts': '2025-09-06T00:08:13.797379Z'}
+2025-09-05 19:08:13 | INFO | Snorlax uses Flamethrower that does 59 damage to Jigglypuff. Jigglypuff has 74 HP left!
+2025-09-05 19:08:14 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'b040ba28-a6f4-4a15-aebc-042eb8998ce0', 'turn': 3, 'trainer': 'Snorlax', 'opponent': 'Jigglypuff', 'move': 'Hyper Beam', 'damage': 22, 'hp_before': 74, 'hp_after': 52, 'ts': '2025-09-06T00:08:14.799711Z'}
+2025-09-05 19:08:14 | INFO | Snorlax uses Hyper Beam that does 22 damage to Jigglypuff. Jigglypuff has 52 HP left!
+2025-09-05 19:08:15 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'b040ba28-a6f4-4a15-aebc-042eb8998ce0', 'turn': 4, 'trainer': 'Snorlax', 'opponent': 'Jigglypuff', 'move': 'Shadow Ball', 'damage': 22, 'hp_before': 52, 'hp_after': 30, 'ts': '2025-09-06T00:08:15.802197Z'}
+2025-09-05 19:08:15 | INFO | Snorlax uses Shadow Ball that does 22 damage to Jigglypuff. Jigglypuff has 30 HP left!
+2025-09-05 19:08:16 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'b040ba28-a6f4-4a15-aebc-042eb8998ce0', 'turn': 5, 'trainer': 'Snorlax', 'opponent': 'Jigglypuff', 'move': 'Hyper Beam', 'damage': 22, 'hp_before': 30, 'hp_after': 8, 'ts': '2025-09-06T00:08:16.804465Z'}
+2025-09-05 19:08:16 | INFO | Snorlax uses Hyper Beam that does 22 damage to Jigglypuff. Jigglypuff has 8 HP left!
+2025-09-05 19:08:17 | INFO | [SEND] {'event_type': 'attack', 'battle_id': 'b040ba28-a6f4-4a15-aebc-042eb8998ce0', 'turn': 6, 'trainer': 'Snorlax', 'opponent': 'Jigglypuff', 'move': 'Body Slam', 'damage': 45, 'hp_before': 8, 'hp_after': 0, 'ts': '2025-09-06T00:08:17.807108Z'}
+2025-09-05 19:08:17 | INFO | Snorlax uses Body Slam that does 45 damage to Jigglypuff. Jigglypuff has 0 HP left!
+2025-09-05 19:08:18 | INFO | [WIN] {'event_type': 'win', 'battle_id': 'b040ba28-a6f4-4a15-aebc-042eb8998ce0', 'turn': 6, 'trainer': 'Snorlax', 'opponent': 'Jigglypuff', 'ts': '2025-09-06T00:08:18.809098Z'}
+2025-09-05 19:08:18 | INFO | [BATTLE] 608f8980: Pikachu vs Gengar (opponent HP = 120)
+2025-09-05 19:08:18 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '608f8980-278c-4948-ae05-5d6581f504af', 'turn': 1, 'trainer': 'Pikachu', 'opponent': 'Gengar', 'move': 'Thunderbolt', 'damage': 12, 'hp_before': 120, 'hp_after': 108, 'ts': '2025-09-06T00:08:18.811207Z'}
+2025-09-05 19:08:18 | INFO | Snorlax knocks out Jigglypuff and wins the battle (b040ba28)!
+2025-09-05 19:08:18 | INFO | Pikachu uses Thunderbolt that does 12 damage to Gengar. Gengar has 108 HP left!
+2025-09-05 19:08:19 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '608f8980-278c-4948-ae05-5d6581f504af', 'turn': 2, 'trainer': 'Pikachu', 'opponent': 'Gengar', 'move': 'Body Slam', 'damage': 30, 'hp_before': 108, 'hp_after': 78, 'ts': '2025-09-06T00:08:19.812649Z'}
+2025-09-05 19:08:19 | INFO | Pikachu uses Body Slam that does 30 damage to Gengar. Gengar has 78 HP left!
+2025-09-05 19:08:20 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '608f8980-278c-4948-ae05-5d6581f504af', 'turn': 3, 'trainer': 'Pikachu', 'opponent': 'Gengar', 'move': 'Shadow Ball', 'damage': 15, 'hp_before': 78, 'hp_after': 63, 'ts': '2025-09-06T00:08:20.814816Z'}
+2025-09-05 19:08:20 | INFO | Pikachu uses Shadow Ball that does 15 damage to Gengar. Gengar has 63 HP left!
+2025-09-05 19:08:21 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '608f8980-278c-4948-ae05-5d6581f504af', 'turn': 4, 'trainer': 'Pikachu', 'opponent': 'Gengar', 'move': 'Shadow Ball', 'damage': 15, 'hp_before': 63, 'hp_after': 48, 'ts': '2025-09-06T00:08:21.816578Z'}
+2025-09-05 19:08:21 | WARNING | Consumer interrupted by user.
+2025-09-05 19:08:21 | INFO | END kafka_consumer_pokemon
+2025-09-05 19:08:22 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '608f8980-278c-4948-ae05-5d6581f504af', 'turn': 5, 'trainer': 'Pikachu', 'opponent': 'Gengar', 'move': 'Mimic', 'damage': 0, 'hp_before': 48, 'hp_after': 48, 'ts': '2025-09-06T00:08:22.818789Z'}
+2025-09-05 19:08:23 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '608f8980-278c-4948-ae05-5d6581f504af', 'turn': 6, 'trainer': 'Pikachu', 'opponent': 'Gengar', 'move': 'Quick Attack', 'damage': 12, 'hp_before': 48, 'hp_after': 36, 'ts': '2025-09-06T00:08:23.820935Z'}
+2025-09-05 19:08:24 | INFO | [SEND] {'event_type': 'attack', 'battle_id': '608f8980-278c-4948-ae05-5d6581f504af', 'turn': 7, 'trainer': 'Pikachu', 'opponent': 'Gengar', 'move': 'Psychic', 'damage': 17, 'hp_before': 36, 'hp_after': 19, 'ts': '2025-09-06T00:08:24.823379Z'}
+2025-09-05 19:08:25 | WARNING | Producer interrupted by user.
+2025-09-05 19:08:25 | INFO | END kafka_producer_pokemon
